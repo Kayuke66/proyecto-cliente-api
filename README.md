@@ -1,29 +1,45 @@
-# Proyecto API Client
-Cliente hecho en Python que consume una API REST local documentada con Swagger UI.
+# Proyecto Cliente API
+
+Cliente en Python para consumir una API REST local documentada con Swagger UI / OpenAPI.
+
 ## Descripción
 
-Proyecto trabajado durante mi estancia en Nomia Energy
-Realizado con el objetivo de crear un cliente capaz de enlazarse la API REST usando el lenguaje Python.
+Este proyecto forma parte de unas prácticas de empresa y tiene como objetivo desarrollar un cliente en Python capaz de consumir una API REST local, con una estructura profesional, control de versiones, documentación y tests.
 
-## Tecnología usada
+La API utilizada corresponde al servicio **Santra Edge Agent Backend Service**, que expone su documentación en Swagger UI.
+
+## Objetivos del proyecto
+
+- Consumir endpoints de la API REST desde Python.
+- Entender y utilizar Swagger UI / OpenAPI como base para implementar el cliente.
+- Mantener una estructura de proyecto profesional.
+- Gestionar versiones con Git y GitHub.
+- Documentar cambios con `CHANGELOG.md`.
+- Añadir tests con `pytest`.
+
+## Tecnologías utilizadas
 
 - Python
 - requests
-- PyCharm
+- pytest
 - Git / GitHub
+- PyCharm
 - Swagger UI / OpenAPI
 - uv
 
-## Project structure
+## Estructura del proyecto
 
 ```text
 proyecto-cliente-api/
 ├── src/
 │   └── api_client/
 │       ├── __init__.py
+│       ├── client.py
 │       ├── config.py
 │       ├── digital_twin.py
-│       └── main.py
+│       ├── health.py
+│       ├── main.py
+│       └── system.py
 ├── tests/
 ├── docs/
 ├── .gitignore
@@ -33,43 +49,72 @@ proyecto-cliente-api/
 └── uv.lock
 ```
 
-## Installation
+## Requisitos
 
-1. Clone the repository.
-2. Create or activate the virtual environment.
-3. Install dependencies.
+- Python instalado
+- Entorno virtual configurado
+- API local arrancada en `http://localhost:3000`
+- Acceso a la documentación Swagger en `http://localhost:3000/api/docs`
 
-Example:
+## Instalación
+
+1. Clonar el repositorio.
+2. Acceder a la carpeta del proyecto.
+3. Activar el entorno virtual.
+4. Instalar dependencias.
+
+Ejemplo:
+
+```bash
+pip install requests pytest
+```
+
+Si usas `uv`:
 
 ```bash
 uv sync
 ```
 
-Or, if needed:
+## Ejecución
 
-```bash
-pip install requests
-```
+Para ejecutar el proyecto desde PyCharm, usa `main.py` como punto de entrada.
 
-## Usage
+También puedes ejecutarlo desde terminal según la configuración del entorno y de imports del proyecto.
 
-Run the project from the source entry point:
+## Endpoints implementados actualmente
 
-```bash
-python src/api_client/main.py
-```
+### Health
+- `GET /api/health`
 
-## Current status
+### System
+- `GET /api/version`
 
-The client currently connects to the local API and consumes the endpoint:
-
+### Digital Twin
 - `GET /api/digital-twin/tree`
+- `GET /api/digital-twin/devices`
+- `GET /api/digital-twin/devices/{id}`
+- `GET /api/digital-twin/devices/{id}/points`
+- `GET /api/digital-twin/equipments/{id}/points`
+- `GET /api/digital-twin/points`
 
-## Roadmap
+## Estado actual
 
-- Improve project structure
-- Add reusable request functions
-- Learn to interpret Swagger UI/OpenAPI documentation
-- Add more endpoints
-- Add tests
-- Improve error handling and configuration
+El proyecto ya cuenta con:
+- una estructura profesional de carpetas;
+- un cliente base reutilizable;
+- varios endpoints `GET` implementados;
+- integración con Git y GitHub;
+- documentación inicial;
+- preparación para tests.
+
+## Próximos pasos
+
+- Añadir tests con `pytest`.
+- Ampliar el cliente con endpoints `POST`.
+- Mejorar la reutilización del cliente HTTP.
+- Documentar mejor el uso de Swagger UI dentro del proyecto.
+- Valorar una interfaz si sobra tiempo.
+
+## Versionado
+
+Este proyecto sigue Semantic Versioning (`SemVer`) y documenta sus cambios en `CHANGELOG.md`.

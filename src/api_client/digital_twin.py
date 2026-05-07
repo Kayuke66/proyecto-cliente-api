@@ -1,28 +1,25 @@
-import requests
-
-from api_client.config import DEF_URL, DEF_TIMEOUT
+from api_client.client import APIClient
 
 def digital_twin_tree():
-    endpoint = "/api/digital-twin/tree"
-    url = DEF_URL + endpoint
+    client = APIClient()
+    return client.get("/api/digital-twin/tree")
 
-    try:
-        respuesta = requests.get(url, timeout=5)
-        respuesta.raise_for_status()
+def get_devices():
+    client = APIClient()
+    return client.get("/api/digital-twin/devices")
 
-        datos = respuesta.json()
-        return datos
+def get_device_by_id(device_id):
+    client = APIClient()
+    return client.get(f"/api/digital-twin/devices/{device_id}")
 
-    except requests.exceptions.ConnectionError:
-        print("La conexión con la API no ha sido posible.")
-    except requests.exceptions.Timeout:
-        print("Se agotó el tiempo de espera de la API.")
-    except requests.exceptions.HTTPError as error:
-        print("Error:", error)
-    except ValueError:
-        print("No hay contenido JSON válido.")
-    except requests.exceptions.RequestException as error:
-        print("Error en su petición: ", error)
+def get_device_points(device_id):
+    client = APIClient()
+    return client.get(f"/api/digital-twin/devices/{device_id}/points")
 
-    return None
+def get_equipment_points(equipment_id):
+    client = APIClient()
+    return client.get(f"/api/digital-twin/equipments/{equipment_id}/points")
 
+def get_all_points():
+    client = APIClient()
+    return client.get("/api/digital-twin/points")
