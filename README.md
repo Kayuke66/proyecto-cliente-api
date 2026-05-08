@@ -11,7 +11,7 @@ La API utilizada corresponde al servicio **Santra Edge Agent Backend Service**, 
 ## Objetivos del proyecto
 
 - Consumir endpoints de la API REST desde Python.
-- Entender y utilizar Swagger UI / OpenAPI como base para implementar el cliente.
+- Entender y utilizar Swagger UI / OpenAPI como referencia técnica del contrato de la API.
 - Mantener una estructura de proyecto profesional.
 - Gestionar versiones con Git y GitHub.
 - Documentar cambios con `CHANGELOG.md`.
@@ -51,10 +51,10 @@ proyecto-cliente-api/
 
 ## Requisitos
 
-- Python instalado
-- Entorno virtual configurado
-- API local arrancada en `http://localhost:3000`
-- Acceso a la documentación Swagger en `http://localhost:3000/api/docs`
+- Python instalado.
+- Entorno virtual configurado.
+- API local arrancada en `http://localhost:3000`.
+- Acceso a Swagger UI en `http://localhost:3000/api/docs`.
 
 ## Instalación
 
@@ -63,7 +63,7 @@ proyecto-cliente-api/
 3. Activar el entorno virtual.
 4. Instalar dependencias.
 
-Ejemplo:
+Con `pip`:
 
 ```bash
 pip install requests pytest
@@ -77,11 +77,11 @@ uv sync
 
 ## Ejecución
 
-Para ejecutar el proyecto desde PyCharm, usa `main.py` como punto de entrada.
+Actualmente el punto de entrada del proyecto es `main.py`, que se usa como lanzador manual para probar endpoints durante el desarrollo.
 
-También puedes ejecutarlo desde terminal según la configuración del entorno y de imports del proyecto.
+En PyCharm, lo normal es ejecutar `main.py` como archivo principal del proyecto.
 
-## Endpoints implementados actualmente
+## Endpoints GET implementados
 
 ### Health
 - `GET /api/health`
@@ -92,10 +92,33 @@ También puedes ejecutarlo desde terminal según la configuración del entorno y
 ### Digital Twin
 - `GET /api/digital-twin/tree`
 - `GET /api/digital-twin/devices`
-- `GET /api/digital-twin/devices/{id}`
-- `GET /api/digital-twin/devices/{id}/points`
-- `GET /api/digital-twin/equipments/{id}/points`
+- `GET /api/digital-twin/devices/{id}` — requiere `device_id`
+- `GET /api/digital-twin/devices/{id}/points` — requiere `device_id`
+- `GET /api/digital-twin/equipments/{id}/points` — requiere `equipment_id`
 - `GET /api/digital-twin/points`
+
+## Endpoints POST previstos / en implementación
+
+### Requieren `requestBody`
+- `POST /api/digital-twin/import/ede`
+- `POST /api/digital-twin/import/santra-legacy-json`
+
+### No requieren `requestBody`
+- `POST /api/digital-twin/save`
+- `POST /api/digital-twin/load`
+
+## Validaciones actuales
+
+Los endpoints GET que incluyen `{id}` requieren un identificador obligatorio. El cliente valida estos parámetros antes de construir la URL para evitar llamadas inválidas.
+
+## Tests
+
+El proyecto utiliza `pytest` para pruebas automatizadas.
+
+Actualmente se están incorporando:
+- tests del cliente base HTTP;
+- tests de validación de parámetros obligatorios;
+- tests para métodos `GET` y `POST`.
 
 ## Estado actual
 
@@ -103,17 +126,19 @@ El proyecto ya cuenta con:
 - una estructura profesional de carpetas;
 - un cliente base reutilizable;
 - varios endpoints `GET` implementados;
+- versionado inicial del proyecto;
 - integración con Git y GitHub;
 - documentación inicial;
-- preparación para tests.
+- preparación de validaciones y tests;
+- inicio del soporte para peticiones `POST`.
 
 ## Próximos pasos
 
-- Añadir tests con `pytest`.
-- Ampliar el cliente con endpoints `POST`.
+- Completar la implementación real de endpoints `POST` a partir de Swagger UI.
+- Ampliar los tests con más casos de error y validación.
 - Mejorar la reutilización del cliente HTTP.
-- Documentar mejor el uso de Swagger UI dentro del proyecto.
-- Valorar una interfaz si sobra tiempo.
+- Documentar ejemplos de uso de cada endpoint.
+- Valorar una interfaz visual si sobra tiempo.
 
 ## Versionado
 

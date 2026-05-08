@@ -3,6 +3,23 @@ Los cambios de este proyecto están documentados en este archivo.
 
 Formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
+## [Unreleased]
+
+### Añadido
+- Soporte inicial para endpoints POST de Digital Twin.
+- Nuevas funciones de Digital Twin para importar, guardar y cargar modelos.
+- Tests iniciales para validaciones y peticiones POST.
+
+### Verificado
+- `POST /api/digital-twin/save` responde correctamente.
+- `POST /api/digital-twin/load` devuelve actualmente `404 Not Found` también desde Swagger UI.
+
+### Cambiado
+- Validación de parámetros obligatorios en endpoints GET con identificadores.
+
+### Corregido
+- Soporte para peticiones POST sin `requestBody` en el cliente base.
+
 ## [0.2.0] - 2026-05-07
 ### Añadido
 - Cliente base reutilizable para realizar peticiones `GET` a la API.
@@ -20,7 +37,6 @@ Formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 - Problemas iniciales de imports y estructura del proyecto.
 - Error de indentación en la clase `APIClient`.
 - Orden de las excepciones `except` para evitar código inalcanzable.
-
 
 ## [0.1.0] - 2026-05-07
 

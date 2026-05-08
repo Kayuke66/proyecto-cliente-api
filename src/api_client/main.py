@@ -4,6 +4,9 @@ from api_client.digital_twin import (
     digital_twin_tree,
     get_devices,
     get_all_points,
+    import_santra_legacy_json,
+    save_digital_twin,
+    load_digital_twin,
 )
 
 
@@ -20,7 +23,7 @@ def main():
     print("\nVersion:")
     print(version_data)
 
-    print("\nDigital Twin Tree:")
+    print("\nTree:")
     print(tree_data)
 
     print("\nDevices:")
@@ -29,6 +32,22 @@ def main():
     print("\nPoints:")
     print(points_data)
 
+    ejemplo_santra_legacy = {
+        "idPlanta": "TESTSITE",
+        "denominacion": "Test Site",
+        "legalEntity": "B88888888",
+        "language": "fr",
+        "dispositivos": []
+    }
+
+    print("\nImport Santra Legacy JSON:")
+    print(import_santra_legacy_json(ejemplo_santra_legacy))
+
+    print("\nSave Digital Twin:")
+    print(save_digital_twin())
+
+    print("\nLoad Digital Twin:")
+    print(load_digital_twin())
 
 if __name__ == "__main__":
     main()
