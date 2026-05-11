@@ -1,5 +1,5 @@
 import requests
-from api_client.config import DEF_URL, DEF_TIMEOUT
+from src.api_client.config import DEF_URL, DEF_TIMEOUT
 
 class APIClient:
     def __init__(self, def_url=DEF_URL, timeout=DEF_TIMEOUT):
@@ -31,8 +31,13 @@ class APIClient:
             print("Su petición ha superado el tiempo de espera.")
         except requests.exceptions.HTTPError as error:
             print("Error de conexión HTTP:", error)
-        except ValueError:
-            print("La respuesta no contiene un JSON válido.")
+
+            try:
+                error_body = respuesta.json()
+                print("Detalle del error: ", error_body)
+            except Exception:
+                pass
+
         except requests.exceptions.RequestException as error:
             print("Error en la petición:", error)
 
@@ -60,8 +65,13 @@ class APIClient:
             print("La petición ha superado el tiempo de espera.")
         except requests.exceptions.HTTPError as error:
             print("Error HTTP:", error)
-        except ValueError:
-            print("La respuesta no contiene un JSON válido.")
+
+            try:
+                error_body = respuesta.json()
+                print("Detalle del error:", error_body)
+            except Exception:
+                pass
+
         except requests.exceptions.RequestException as error:
             print("Error en la petición:", error)
 

@@ -1,4 +1,4 @@
-from api_client.client import APIClient
+from src.api_client.client import APIClient
 
 def get_health():
     client = APIClient()

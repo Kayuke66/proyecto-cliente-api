@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santra - Panel API</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Santra</p>
+                <h1>Panel de integración API</h1>
+                <p class="intro">
+                    Visualización del estado del backend y datos del Digital Twin.
+                </p>
+            </div>
+        </header>
+
+        <section class="grid-two">
+            <article class="card">
+                <div class="section-header">
+                    <h2>Health</h2>
+                    <button id="btn-health">Cargar Health</button>
+                </div>
+
+                <div id="health-summary" class="health-panel">
+                    <div class="health-kpis">
+                        <div class="kpi-card">
+                            <span class="kpi-label">Estado</span>
+                            <span id="health-status" class="kpi-value">Sin datos</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-label">Uptime</span>
+                            <span id="health-uptime" class="kpi-value">Sin datos</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-label">Delay</span>
+                            <span id="health-delay" class="kpi-value">Sin datos</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-label">RSS</span>
+                            <span id="health-rss" class="kpi-value">Sin datos</span>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <canvas id="healthChart"></canvas>
+                    </div>
+
+                    <div class="health-details" id="health-details">
+                        Sin datos todavía
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="section-header">
+                    <h2>Version</h2>
+                    <button id="btn-version">Cargar Version</button>
+                </div>
+                <div id="version-summary" class="summary-box">Sin datos todavía</div>
+            </article>
+        </section>
+
+        <section class="card">
+            <div class="section-header">
+                <h2>Devices</h2>
+                <button id="btn-devices">Cargar Devices</button>
+            </div>
+            <div id="devices-result">Sin datos todavía</div>
+        </section>
+
+        <section class="card">
+            <div class="section-header">
+                <h2>Points</h2>
+                <button id="btn-points">Cargar Points</button>
+            </div>
+            <pre id="points-result">Sin datos todavía</pre>
+        </section>
+
+        <section class="card">
+    <div class="section-header">
+        <h2>Save Digital Twin</h2>
+        <button id="btn-save">Guardar modelo</button>
+    </div>
+    <pre id="save-result">Sin datos todavía</pre>
+        </section>
+
+        <section class="card">
+            <div class="section-header">
+                <h2>Load Digital Twin</h2>
+                <button id="btn-load">Cargar modelo</button>
+            </div>
+            <pre id="load-result">Sin datos todavía</pre>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>

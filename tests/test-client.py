@@ -12,6 +12,38 @@ class MockEmptyResponse:
     def json(self):
         return None
 
+class MockHttpJsonErrorResponse:
+    text = '{"error": {"code": "ERR_SMA_007"}}'
+
+    def raise_for_status(self):
+        raise requests.exceptions.HTTPError("400 Client Error")
+
+    def json(self):
+        return {
+            "error": {
+                "code": "ERR_SMA_007",
+                "message": "EDE file validation failed",
+                "details": [
+                    "EDE does not contain any device definition"
+                ]
+            }
+        }
+
+
+def test_post_devuelve_none_si_hay_http_error_con_json(monkeypatch):
+    def mock_post(self, url, data, headers, timeout):
+        return MockHttpJsonErrorResponse()
+
+    monkeypatch.setattr("requests.sessions.Session.post", mock_post)
+
+    client = APIClient()
+    result = client.post(
+        "/api/digital-twin/import/ede",
+        "contenido de prueba",
+        content_type="text/plain"
+    )
+
+    assert result is None
 
 def test_get_da_none_si_la_respuesta_esta_vacia(monkeypatch):
     def mock_get(self, url, timeout):

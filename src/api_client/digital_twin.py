@@ -1,4 +1,4 @@
-from api_client.client import APIClient
+from src.api_client.client import APIClient
 
 def digital_twin_tree():
     client = APIClient()
@@ -39,6 +39,21 @@ def import_ede(ede_content):
                        ede_content,
                        content_type="text/plain"
     )
+
+def import_ede_from_file(file_path):
+    if not file_path:
+        raise ValueError("Se requiere la ruta del archivo EDE")
+
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            ede_content = file.read()
+    except FileNotFoundError:
+        raise ValueError(f"No se encontró el archivo: {file_path}")
+
+    if not ede_content.strip():
+        raise ValueError("El archivo EDE está vacío")
+
+    return import_ede(ede_content)
 
 def import_santra_legacy_json(data):
     if not data:

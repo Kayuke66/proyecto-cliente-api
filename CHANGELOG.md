@@ -1,47 +1,56 @@
 # Changelog
-Los cambios de este proyecto están documentados en este archivo.
 
-Formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
+Este proyecto sigue una convención inspirada en Keep a Changelog y Semantic Versioning.
 
 ## [Unreleased]
 
-### Añadido
-- Soporte inicial para endpoints POST de Digital Twin.
-- Nuevas funciones de Digital Twin para importar, guardar y cargar modelos.
-- Tests iniciales para validaciones y peticiones POST.
+### Added
+- Pendiente de registrar los siguientes cambios en desarrollo.
 
-### Verificado
-- `POST /api/digital-twin/save` responde correctamente.
-- `POST /api/digital-twin/load` devuelve actualmente `404 Not Found` también desde Swagger UI.
+## [0.3.0] - 2026-05-11
 
-### Cambiado
-- Validación de parámetros obligatorios en endpoints GET con identificadores.
+### Added
+- Se añadió una aplicación web con FastAPI como backend intermedio.
+- Se añadieron plantillas HTML con Jinja2.
+- Se añadieron archivos estáticos para CSS y JavaScript.
+- Se añadió una interfaz visual inicial para consultar Health, Version, Devices y Points.
+- Se añadió una tabla HTML dinámica para visualizar Devices.
+- Se añadió un panel visual de Health con métricas resumidas.
+- Se añadió soporte para gráficos interactivos con Chart.js en el panel de Health.
+- Se preparó la base para ejecutar operaciones POST desde la interfaz web.
+- Se adoptó una línea visual inspirada en la identidad de color de Santra.
 
-### Corregido
-- Soporte para peticiones POST sin `requestBody` en el cliente base.
+### Changed
+- Se reorganizó el proyecto para trabajar con una arquitectura frontend + backend Python + cliente API.
+- Se actualizaron los imports internos a la convención `src.api_client...`.
+- Se actualizó la forma de renderizar plantillas en FastAPI con `TemplateResponse(request=request, name="index.html")`.
+- Se mejoró la presentación visual del panel principal.
+- Se mejoró la estructura del frontend para separar bloques de resumen, tablas y paneles de detalle.
 
-## [0.2.0] - 2026-05-07
-### Añadido
-- Cliente base reutilizable para realizar peticiones `GET` a la API.
-- Módulo `health` para consumir `GET /api/health`.
-- Módulo `system` para consumir `GET /api/version`.
-- Ampliación del módulo `digital_twin` con varios endpoints `GET`.
-- Organización del proyecto en módulos bajo `src/api_client/`.
+### Fixed
+- Se corrigieron errores de importación que impedían ejecutar `uvicorn`.
+- Se corrigieron dependencias faltantes para FastAPI, Uvicorn, Jinja2 y requests.
+- Se corrigieron problemas de maquetación y estilos en la interfaz web.
+- Se corrigió el problema de carga y actualización del gráfico de Health.
 
-### Cambiado
-- Separación de la lógica de ejecución en `main.py`.
-- Reestructuración del proyecto hacia un formato más profesional y mantenible.
+## [0.2.0] - 2026-05-08
 
-### Corregido
-- Uso incorrecto de `raise_for_status()`.
-- Problemas iniciales de imports y estructura del proyecto.
-- Error de indentación en la clase `APIClient`.
-- Orden de las excepciones `except` para evitar código inalcanzable.
+### Added
+- Se añadió una estructura modular inicial para el cliente Python.
+- Se añadieron funciones para consultar Health, Version, Devices, Points y árbol del Digital Twin.
+- Se añadieron funciones para Save, Load, importación de JSON Santra Legacy e importación de EDE.
+- Se añadió un script principal de pruebas desde consola.
+
+### Changed
+- Se separó la lógica por módulos para facilitar mantenimiento y comprensión.
+- Se mejoró la legibilidad del flujo de pruebas del cliente.
+
+### Fixed
+- Se ajustaron respuestas y validaciones al comportamiento observado en Swagger.
 
 ## [0.1.0] - 2026-05-07
 
-### Añadido
-- Estructura inicial del proyecto profesional. 
-- Cliente API base con lógica GET reutilizable.
-- Consumo inicial del punto final Digital Twin.
-- Integración de README, CHANGELOG y Git.
+### Added
+- Inicio del proyecto como cliente Python para consumir una API REST.
+- Configuración base del cliente HTTP.
+- Primeras pruebas manuales con endpoints GET.

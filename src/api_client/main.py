@@ -1,3 +1,4 @@
+import json
 from api_client.health import get_health
 from api_client.system import get_version
 from api_client.digital_twin import (
@@ -7,10 +8,14 @@ from api_client.digital_twin import (
     import_santra_legacy_json,
     save_digital_twin,
     load_digital_twin,
+    import_ede_from_file,
 )
 
+def mostrar_titulo_y_datos(titulo, datos):
+    print(f"\n{titulo}:")
+    print(json.dumps(datos, indent=4, ensure_ascii=False))
 
-def main():
+def probar_gets():
     health_data = get_health()
     version_data = get_version()
     tree_data = digital_twin_tree()
@@ -32,7 +37,9 @@ def main():
     print("\nPoints:")
     print(points_data)
 
-    ejemplo_santra_legacy = {
+
+def probar_posts():
+    ejemplo_santra = {
         "idPlanta": "TESTSITE",
         "denominacion": "Test Site",
         "legalEntity": "B88888888",
@@ -41,13 +48,27 @@ def main():
     }
 
     print("\nImport Santra Legacy JSON:")
-    print(import_santra_legacy_json(ejemplo_santra_legacy))
+    print(import_santra_legacy_json(ejemplo_santra))
 
     print("\nSave Digital Twin:")
     print(save_digital_twin())
 
     print("\nLoad Digital Twin:")
     print(load_digital_twin())
+
+
+def probar_ede():
+    ruta_ede = "ejemplo.ede"
+
+    print("\nImport EDE from file:")
+    print(import_ede_from_file(ruta_ede))
+
+
+def main():
+    probar_gets()
+    probar_posts()
+    probar_ede()
+
 
 if __name__ == "__main__":
     main()
