@@ -10,25 +10,21 @@ async function obtenerDatos(url) {
     return await response.json();
 }
 
-async function enviarPost(url, body = null) {
-    const options = {
+async function enviarPost(url, body) {
+    const response = await fetch (url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
-        }
-    };
-
-    if (body !== null) {
-        options.body = JSON.stringify(body);
-    }
-
-    const response = await fetch(url, options);
+        },
+        body: JSON.stringify(body),
+    });
 
     if (!response.ok) {
-        throw new Error(`Error HTTP: ${response.status}`);
+        const text = await response.text();
+        throw new Error(`Error ${response.status} - ${text}`);
     }
 
-    return await response.json();
+    return response.json();
 }
 
 function destruirHealthChartSiExiste() {
@@ -308,7 +304,39 @@ async function cargarDigitalTwin(){
         }
     }
 }
+async function importarSantraLegacy() {
+    const textarea = document.getElementById("santra-json-input");
+    const result = document.getElementById("santra-import-result");
 
+    if (!textarea || !result) {
+        return;
+    }
+
+    const rawText = textarea.value.trim();
+
+    if (!rawText) {
+        result.textContent = "Introduce primero el JSON de Santra Legacy.";
+        return;
+    }
+
+    let parsed;
+    try {
+        parsed = JSON.parse(rawText);
+    } catch (error) {
+        result.textContent = "El texto no es un JSON válido: " + error.message;
+        return;
+    }
+
+    result.textContent = "Enviando datos...";
+
+    try {
+        const data = await enviarPost("/web-api/import-santra-json", parsed);
+        result.textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+        result.textContent = "Error al importar: " + error.message;
+    }
+}
+document.getElementById("btn-santra-import")?.addEventListener("click", importarSantraLegacy);
 document.getElementById("btn-health")?.addEventListener("click", cargarHealth);
 document.getElementById("btn-version")?.addEventListener("click", cargarVersion);
 document.getElementById("btn-devices")?.addEventListener("click", cargarDevices);

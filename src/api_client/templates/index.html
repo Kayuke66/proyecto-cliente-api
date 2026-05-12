@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santra - Panel API</title>
+    <title>Santra - API Panel </title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
@@ -12,9 +12,6 @@
             <div>
                 <p class="eyebrow">Santra</p>
                 <h1>Panel de integración API</h1>
-                <p class="intro">
-                    Visualización del estado del backend y datos del Digital Twin.
-                </p>
             </div>
         </header>
 
@@ -94,6 +91,26 @@
                 <button id="btn-load">Cargar modelo</button>
             </div>
             <pre id="load-result">Sin datos todavía</pre>
+        </section>
+
+        <section class="card">
+            <div class="section-header">
+                <h2>Santra Legacy JSON</h2>
+                <button id="btn-import-santra">Importar JSON</button>
+            </div>
+            <p class="intro">
+                Pega aquí tu Santra Legacy en formato JSON. El backend lo enviará a la API real y
+                se mostrará la respuesta.
+            </p>
+
+            <textarea
+                id="santra-json-input"
+                rows="10"
+                style="width: 100%; border-radius: 12px; padding: 0.75rem; font-family: monospace;"
+                placeholder='{"example": "Pega aquí tu Santra Legacy en formato JSON"}'
+            ></textarea>
+
+            <pre id="santra-import-result" style="margin-top: 1rem;">Sin datos todavía</pre>
         </section>
     </main>
 

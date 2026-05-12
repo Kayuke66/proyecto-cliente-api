@@ -55,18 +55,11 @@ def import_ede_from_file(file_path):
 
     return import_ede(ede_content)
 
-def import_santra_legacy_json(data):
-    if not data:
-        raise ValueError("Se requiere el archivo .json")
+def import_santra_legacy_json(data: dict) -> dict:
+    endpoint = "/digital-twin/import/santra-legacy-json"
 
-    required_fields = ["idPlanta", "denominacion", "legalEntity", "language", "dispositivos"]
-
-    for field in required_fields:
-        if field not in data:
-            raise ValueError(f"No se ha introducido el siguiente campo: {field}")
-
-    client = APIClient()
-    return client.post("/api/digital-twin/import/santra-legacy-json", data)
+    response = APIClient.post(endpoint, json=data)
+    return response
 
 def save_digital_twin():
     client = APIClient()

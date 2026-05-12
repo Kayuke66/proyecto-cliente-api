@@ -2,10 +2,10 @@
 
 Este proyecto sigue una convención inspirada en Keep a Changelog y Semantic Versioning.
 
-## [Unreleased]
+## [0.3.1] - 2026-05-12
 
 ### Added
-- Pendiente de registrar los siguientes cambios en desarrollo.
+- Añadido flujo completo de importación Santra Legacy JSON desde la interfaz web.
 
 ## [0.3.0] - 2026-05-11
 

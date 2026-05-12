@@ -1,8 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, Body
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi import Request
 
 from src.api_client.health import get_health
 from src.api_client.system import get_version
@@ -11,6 +10,7 @@ from src.api_client.digital_twin import (
     get_all_points,
     save_digital_twin,
     load_digital_twin,
+    import_santra_legacy_json,
 )
 
 app = FastAPI(title="Santra Web Client - Nomia Energy")
@@ -49,3 +49,8 @@ def web_save():
 @app.post("/web-api/load")
 def web_load():
     return load_digital_twin()
+
+@app.post("/web-api/import-santra-json")
+def web_import_santra_json(payload: dict = Body(...)):
+    resultado = import_santra_legacy_json(payload)
+    return {"status": "ok", "data": resultado}
