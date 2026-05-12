@@ -336,6 +336,46 @@ async function importarSantraLegacy() {
         result.textContent = "Error al importar: " + error.message;
     }
 }
+
+async function importarEde() {
+    const input = document.getElementById("ede-file-input");
+    const result = document.getElementById("ede-import-result");
+
+    if (!input || !result) {
+        return;
+    }
+
+    if (!input.files || input.files.length === 0) {
+        result.textContent = "Selecciona primero un archivo EDE.";
+        return;
+    }
+
+    const file = input.files[0];
+    result.textContent = `Importando archivo: ${file.name}...`;
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+        const response = await fetch("/web-api/import-ede", {
+            method: "POST",
+            body: formData,
+        });
+
+        if (!response.ok) {
+            const text = await response.text();
+            throw new Error(`Error ${response.status}: ${text}`);
+        }
+
+        const data = await response.json();
+        result.textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+        result.textContent = "Error al importar EDE: " + error.message;
+    }
+}
+
+
+document.getElementById("btn-ede-import")?.addEventListener("click", importarEde);
 document.getElementById("btn-santra-import")?.addEventListener("click", importarSantraLegacy);
 document.getElementById("btn-health")?.addEventListener("click", cargarHealth);
 document.getElementById("btn-version")?.addEventListener("click", cargarVersion);

@@ -95,6 +95,26 @@
 
         <section class="card">
             <div class="section-header">
+                <h2>Import EDE</h2>
+                <button id="btn-ede-import">Importar archivo EDE</button>
+            </div>
+
+            <p class="intro">
+                Selecciona un archivo EDE desde tu equipo y se enviará a la API para su importación.
+            </p>
+
+            <input
+                id="ede-file-input"
+                type="file"
+                accept=".ede"
+                style="margin-top: 0.75rem;"
+            />
+
+            <pre id="ede-import-result" style="margin-top: 1rem;">Sin datos todavía</pre>
+         </section>
+
+        <section class="card">
+            <div class="section-header">
                 <h2>Santra Legacy JSON</h2>
                 <button id="btn-import-santra">Importar JSON</button>
             </div>

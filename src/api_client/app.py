@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, Body
+from fastapi import FastAPI, Request, Body, UploadFile, File, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -11,6 +11,7 @@ from src.api_client.digital_twin import (
     save_digital_twin,
     load_digital_twin,
     import_santra_legacy_json,
+    import_ede_from_file,
 )
 
 app = FastAPI(title="Santra Web Client - Nomia Energy")
@@ -54,3 +55,21 @@ def web_load():
 def web_import_santra_json(payload: dict = Body(...)):
     resultado = import_santra_legacy_json(payload)
     return {"status": "ok", "data": resultado}
+
+@app.post("/web-api/import-ede")
+async def web_import_ede(file: UploadFile = File(...)):
+
+    if not file.filename:
+        raise HTTPException(status_code=400, detail="No se ha enviado ningún archivo.")
+
+    try:
+        content = await file.read()
+    except Exception:
+        raise HTTPException(status_code=500, detail="Error al leer el archivo EDE.")
+
+    try:
+        resultado = import_ede_from_file(filename=file.filename, content=content)
+    except Exception as exc:
+        raise HTTPException(status_code=502, detail=f"Error al importar EDE: {exc}")
+
+    return resultado

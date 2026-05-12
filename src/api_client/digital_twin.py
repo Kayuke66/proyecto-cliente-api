@@ -40,20 +40,15 @@ def import_ede(ede_content):
                        content_type="text/plain"
     )
 
-def import_ede_from_file(file_path):
-    if not file_path:
-        raise ValueError("Se requiere la ruta del archivo EDE")
+def import_ede_from_file(filename: str, content: bytes) -> dict:
+    endpoint = "/digital-twin/import/ede"
 
-    try:
-        with open(file_path, "r", encoding="utf-8") as file:
-            ede_content = file.read()
-    except FileNotFoundError:
-        raise ValueError(f"No se encontró el archivo: {file_path}")
+    files = {
+        "file": (filename, content, "text/plain"),  # o el content-type que corresponda
+    }
 
-    if not ede_content.strip():
-        raise ValueError("El archivo EDE está vacío")
-
-    return import_ede(ede_content)
+    response = APIClient.post(endpoint, files=files)
+    return response
 
 def import_santra_legacy_json(data: dict) -> dict:
     endpoint = "/digital-twin/import/santra-legacy-json"
