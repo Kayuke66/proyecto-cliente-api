@@ -22,6 +22,7 @@ controller = HealthController(health_monitor)
     tags=["Health"],
     summary="Get agent health status",
     response_model=HealthResponseDto,
+    response_model_exclude_none=True,
     responses={
         200: {
             "description": "Health status",

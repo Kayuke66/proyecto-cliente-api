@@ -1,0 +1,6308 @@
+{
+  "devices": [
+    {
+      "id": "121",
+      "name": "Main.dispositivoBACnet",
+      "description": "Main.dispositivoBACnet",
+      "protocol": "bacnet",
+      "vendor": null,
+      "model": null,
+      "host": "NOT ASSIGNED",
+      "port": 47808,
+      "unitId": null,
+      "metadata": null
+    }
+  ],
+  "points": [
+    {
+      "id": "121:0:10000",
+      "name": "Supply.ExternalTemperature",
+      "deviceId": "121",
+      "metric": "ExternalTemperature",
+      "objectType": "0",
+      "objectInstance": "10000",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "62",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Supply"
+    },
+    {
+      "id": "121:0:10001",
+      "name": "Supply.ExternalHumidity",
+      "deviceId": "121",
+      "metric": "ExternalHumidity",
+      "objectType": "0",
+      "objectInstance": "10001",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Supply"
+    },
+    {
+      "id": "121:0:10002",
+      "name": "Supply.Temperature",
+      "deviceId": "121",
+      "metric": "Temperature",
+      "objectType": "0",
+      "objectInstance": "10002",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "62",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Supply"
+    },
+    {
+      "id": "121:0:10003",
+      "name": "Supply.Humidity",
+      "deviceId": "121",
+      "metric": "Humidity",
+      "objectType": "0",
+      "objectInstance": "10003",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Supply"
+    },
+    {
+      "id": "121:0:10004",
+      "name": "Supply.FlowPressure",
+      "deviceId": "121",
+      "metric": "FlowPressure",
+      "objectType": "0",
+      "objectInstance": "10004",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "53",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Supply"
+    },
+    {
+      "id": "121:0:10005",
+      "name": "Supply.AvailablePressure",
+      "deviceId": "121",
+      "metric": "AvailablePressure",
+      "objectType": "0",
+      "objectInstance": "10005",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "53",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Supply"
+    },
+    {
+      "id": "121:0:10006",
+      "name": "Supply.IntakeDamper.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10006",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "IntakeDamper"
+    },
+    {
+      "id": "121:0:10007",
+      "name": "Supply.Damper.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10007",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:0:10008",
+      "name": "Supply.Fans.Fan1.Damper.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10008",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:0:10009",
+      "name": "Supply.Fans.Fan2.Damper.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10009",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:0:10011",
+      "name": "Supply.Filter1.Pressure",
+      "deviceId": "121",
+      "metric": "Pressure",
+      "objectType": "0",
+      "objectInstance": "10011",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "53",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Filter1"
+    },
+    {
+      "id": "121:0:10012",
+      "name": "Supply.Filter2.Pressure",
+      "deviceId": "121",
+      "metric": "Pressure",
+      "objectType": "0",
+      "objectInstance": "10012",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "53",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Filter2"
+    },
+    {
+      "id": "121:0:10014",
+      "name": "Supply.Cooler.Valve.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10014",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Cooler"
+    },
+    {
+      "id": "121:0:10015",
+      "name": "Supply.Heater.Valve.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10015",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Heater"
+    },
+    {
+      "id": "121:0:10016",
+      "name": "Supply.AuxiliarTemperature1",
+      "deviceId": "121",
+      "metric": "AuxiliarTemperature1",
+      "objectType": "0",
+      "objectInstance": "10016",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "62",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Supply"
+    },
+    {
+      "id": "121:0:10017",
+      "name": "Supply.AuxiliarTemperature2",
+      "deviceId": "121",
+      "metric": "AuxiliarTemperature2",
+      "objectType": "0",
+      "objectInstance": "10017",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "62",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Supply"
+    },
+    {
+      "id": "121:0:10019",
+      "name": "Extract.Temperature",
+      "deviceId": "121",
+      "metric": "Temperature",
+      "objectType": "0",
+      "objectInstance": "10019",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "62",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Extract"
+    },
+    {
+      "id": "121:0:10020",
+      "name": "Extract.Humidity",
+      "deviceId": "121",
+      "metric": "Humidity",
+      "objectType": "0",
+      "objectInstance": "10020",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Extract"
+    },
+    {
+      "id": "121:0:10021",
+      "name": "Extract.FlowPressure",
+      "deviceId": "121",
+      "metric": "FlowPressure",
+      "objectType": "0",
+      "objectInstance": "10021",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "53",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Extract"
+    },
+    {
+      "id": "121:0:10022",
+      "name": "Extract.AvailablePressure",
+      "deviceId": "121",
+      "metric": "AvailablePressure",
+      "objectType": "0",
+      "objectInstance": "10022",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "53",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Extract"
+    },
+    {
+      "id": "121:0:10023",
+      "name": "Extract.Damper.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10023",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:0:10024",
+      "name": "Extract.ExhaustDamper.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10024",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "ExhaustDamper"
+    },
+    {
+      "id": "121:0:10025",
+      "name": "Extract.Fans.Fan1.Damper.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10025",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:0:10026",
+      "name": "Extract.Fans.Fan2.Damper.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "0",
+      "objectInstance": "10026",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_input",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:1:10000",
+      "name": "Supply.IntakeDamper.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10000",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "IntakeDamper"
+    },
+    {
+      "id": "121:1:10001",
+      "name": "Supply.Damper.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10001",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:1:10002",
+      "name": "Supply.Fans.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10002",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:1:10003",
+      "name": "Supply.Fans.Fan1.Damper.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10003",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:1:10004",
+      "name": "Supply.Fans.Fan2.Damper.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10004",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:1:10006",
+      "name": "Supply.Cooler.Valve.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10006",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Cooler"
+    },
+    {
+      "id": "121:1:10007",
+      "name": "Supply.Heater.Valve.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10007",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Heater"
+    },
+    {
+      "id": "121:1:10008",
+      "name": "Supply.Humidifier.Position.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10008",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Humidifier"
+    },
+    {
+      "id": "121:1:10009",
+      "name": "Extract.Damper.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10009",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:1:10010",
+      "name": "Extract.ExhaustDamper.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10010",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "ExhaustDamper"
+    },
+    {
+      "id": "121:1:10011",
+      "name": "Extract.Fans.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10011",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:1:10012",
+      "name": "Extract.Fans.Fan1.Damper.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10012",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:1:10013",
+      "name": "Extract.Fans.Fan2.Damper.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "1",
+      "objectInstance": "10013",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_output",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Damper"
+    },
+    {
+      "id": "121:2:10000",
+      "name": "Supply.Fans.Setpoint",
+      "deviceId": "121",
+      "metric": "Setpoint",
+      "objectType": "2",
+      "objectInstance": "10000",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "53",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10001",
+      "name": "Supply.Fans.Fan1.OperatingTime",
+      "deviceId": "121",
+      "metric": "OperatingTime",
+      "objectType": "2",
+      "objectInstance": "10001",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10002",
+      "name": "Supply.Fans.Fan2.OperatingTime",
+      "deviceId": "121",
+      "metric": "OperatingTime",
+      "objectType": "2",
+      "objectInstance": "10002",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10004",
+      "name": "Supply.Filter1.Pressure.OperatingTime",
+      "deviceId": "121",
+      "metric": "OperatingTime",
+      "objectType": "2",
+      "objectInstance": "10004",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Filter1"
+    },
+    {
+      "id": "121:2:10005",
+      "name": "Supply.Filter1.Pressure.LifeTime",
+      "deviceId": "121",
+      "metric": "LifeTime",
+      "objectType": "2",
+      "objectInstance": "10005",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Filter1"
+    },
+    {
+      "id": "121:2:10006",
+      "name": "Supply.Filter2.Pressure.OperatingTime",
+      "deviceId": "121",
+      "metric": "OperatingTime",
+      "objectType": "2",
+      "objectInstance": "10006",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Filter2"
+    },
+    {
+      "id": "121:2:10007",
+      "name": "Supply.Filter2.Pressure.LifeTime",
+      "deviceId": "121",
+      "metric": "LifeTime",
+      "objectType": "2",
+      "objectInstance": "10007",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Filter2"
+    },
+    {
+      "id": "121:2:10008",
+      "name": "Supply.AirFlow",
+      "deviceId": "121",
+      "metric": "AirFlow",
+      "objectType": "2",
+      "objectInstance": "10008",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Supply"
+    },
+    {
+      "id": "121:2:10009",
+      "name": "Exchanger.Pump1.OperatingTime",
+      "deviceId": "121",
+      "metric": "OperatingTime",
+      "objectType": "2",
+      "objectInstance": "10009",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Pump1"
+    },
+    {
+      "id": "121:2:10010",
+      "name": "Exchanger.Pump2.OperatingTime",
+      "deviceId": "121",
+      "metric": "OperatingTime",
+      "objectType": "2",
+      "objectInstance": "10010",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Pump2"
+    },
+    {
+      "id": "121:2:10011",
+      "name": "Extract.Fans.Setpoint",
+      "deviceId": "121",
+      "metric": "Setpoint",
+      "objectType": "2",
+      "objectInstance": "10011",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "53",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10012",
+      "name": "Extract.Fans.Fan1.OperatingTime",
+      "deviceId": "121",
+      "metric": "OperatingTime",
+      "objectType": "2",
+      "objectInstance": "10012",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10013",
+      "name": "Extract.Fans.Fan2.OperatingTime",
+      "deviceId": "121",
+      "metric": "OperatingTime",
+      "objectType": "2",
+      "objectInstance": "10013",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "71",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10015",
+      "name": "Extract.AirFlow",
+      "deviceId": "121",
+      "metric": "AirFlow",
+      "objectType": "2",
+      "objectInstance": "10015",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Extract"
+    },
+    {
+      "id": "121:2:10016",
+      "name": "Temperature.Setpoint",
+      "deviceId": "121",
+      "metric": "Setpoint",
+      "objectType": "2",
+      "objectInstance": "10016",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "62",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Temperature"
+    },
+    {
+      "id": "121:2:10017",
+      "name": "Humidifier.Setpoint",
+      "deviceId": "121",
+      "metric": "Setpoint",
+      "objectType": "2",
+      "objectInstance": "10017",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "98",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Humidifier"
+    },
+    {
+      "id": "121:2:10100",
+      "name": "Supply.Fans.Fan1.SpeedControl",
+      "deviceId": "121",
+      "metric": "SpeedControl",
+      "objectType": "2",
+      "objectInstance": "10100",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10101",
+      "name": "Supply.Fans.Fan1.OperationalCondition1",
+      "deviceId": "121",
+      "metric": "OperationalCondition1",
+      "objectType": "2",
+      "objectInstance": "10101",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10102",
+      "name": "Supply.Fans.Fan1.ErrorStatus",
+      "deviceId": "121",
+      "metric": "ErrorStatus",
+      "objectType": "2",
+      "objectInstance": "10102",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10103",
+      "name": "Supply.Fans.Fan1.Speed",
+      "deviceId": "121",
+      "metric": "Speed",
+      "objectType": "2",
+      "objectInstance": "10103",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10104",
+      "name": "Supply.Fans.Fan1.MotorCurrent",
+      "deviceId": "121",
+      "metric": "MotorCurrent",
+      "objectType": "2",
+      "objectInstance": "10104",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10105",
+      "name": "Supply.Fans.Fan1.LineVoltage",
+      "deviceId": "121",
+      "metric": "LineVoltage",
+      "objectType": "2",
+      "objectInstance": "10105",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10106",
+      "name": "Supply.Fans.Fan1.MotorInputPower",
+      "deviceId": "121",
+      "metric": "MotorInputPower",
+      "objectType": "2",
+      "objectInstance": "10106",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10107",
+      "name": "Supply.Fans.Fan1.MotorVoltage",
+      "deviceId": "121",
+      "metric": "MotorVoltage",
+      "objectType": "2",
+      "objectInstance": "10107",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10200",
+      "name": "Supply.Fans.Fan2.SpeedControl",
+      "deviceId": "121",
+      "metric": "SpeedControl",
+      "objectType": "2",
+      "objectInstance": "10200",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10201",
+      "name": "Supply.Fans.Fan2.OperationCondition1",
+      "deviceId": "121",
+      "metric": "OperationCondition1",
+      "objectType": "2",
+      "objectInstance": "10201",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10202",
+      "name": "Supply.Fans.Fan2.ErrorStatus",
+      "deviceId": "121",
+      "metric": "ErrorStatus",
+      "objectType": "2",
+      "objectInstance": "10202",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10203",
+      "name": "Supply.Fans.Fan2.Speed",
+      "deviceId": "121",
+      "metric": "Speed",
+      "objectType": "2",
+      "objectInstance": "10203",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10204",
+      "name": "Supply.Fans.Fan2.MotorCurrent",
+      "deviceId": "121",
+      "metric": "MotorCurrent",
+      "objectType": "2",
+      "objectInstance": "10204",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10205",
+      "name": "Supply.Fans.Fan2.LineVoltage",
+      "deviceId": "121",
+      "metric": "LineVoltage",
+      "objectType": "2",
+      "objectInstance": "10205",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10206",
+      "name": "Supply.Fans.Fan2.MotorInputPower",
+      "deviceId": "121",
+      "metric": "MotorInputPower",
+      "objectType": "2",
+      "objectInstance": "10206",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:10207",
+      "name": "Supply.Fans.Fan2.MotorVoltage",
+      "deviceId": "121",
+      "metric": "MotorVoltage",
+      "objectType": "2",
+      "objectInstance": "10207",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11100",
+      "name": "Extract.Fans.Fan1.SpeedControl",
+      "deviceId": "121",
+      "metric": "SpeedControl",
+      "objectType": "2",
+      "objectInstance": "11100",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11101",
+      "name": "Extract.Fans.Fan1.OperationCondition1",
+      "deviceId": "121",
+      "metric": "OperationCondition1",
+      "objectType": "2",
+      "objectInstance": "11101",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11102",
+      "name": "Extract.Fans.Fan1.ErrorStatus",
+      "deviceId": "121",
+      "metric": "ErrorStatus",
+      "objectType": "2",
+      "objectInstance": "11102",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11103",
+      "name": "Extract.Fans.Fan1.Speed",
+      "deviceId": "121",
+      "metric": "Speed",
+      "objectType": "2",
+      "objectInstance": "11103",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11104",
+      "name": "Extract.Fans.Fan1.MotorCurrent",
+      "deviceId": "121",
+      "metric": "MotorCurrent",
+      "objectType": "2",
+      "objectInstance": "11104",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11105",
+      "name": "Extract.Fans.Fan1.LineVoltage",
+      "deviceId": "121",
+      "metric": "LineVoltage",
+      "objectType": "2",
+      "objectInstance": "11105",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11106",
+      "name": "Extract.Fans.Fan1.MotorInputPower",
+      "deviceId": "121",
+      "metric": "MotorInputPower",
+      "objectType": "2",
+      "objectInstance": "11106",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11107",
+      "name": "Extract.Fans.Fan1.MotorVoltage",
+      "deviceId": "121",
+      "metric": "MotorVoltage",
+      "objectType": "2",
+      "objectInstance": "11107",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11200",
+      "name": "Extract.Fans.Fan2.SpeedControl",
+      "deviceId": "121",
+      "metric": "SpeedControl",
+      "objectType": "2",
+      "objectInstance": "11200",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11201",
+      "name": "Extract.Fans.Fan2.OperationCondition1",
+      "deviceId": "121",
+      "metric": "OperationCondition1",
+      "objectType": "2",
+      "objectInstance": "11201",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11202",
+      "name": "Extract.Fans.Fan2.ErrorStatus",
+      "deviceId": "121",
+      "metric": "ErrorStatus",
+      "objectType": "2",
+      "objectInstance": "11202",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11203",
+      "name": "Extract.Fans.Fan2.Speed",
+      "deviceId": "121",
+      "metric": "Speed",
+      "objectType": "2",
+      "objectInstance": "11203",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11204",
+      "name": "Extract.Fans.Fan2.MotorCurrent",
+      "deviceId": "121",
+      "metric": "MotorCurrent",
+      "objectType": "2",
+      "objectInstance": "11204",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11205",
+      "name": "Extract.Fans.Fan2.LineVoltage",
+      "deviceId": "121",
+      "metric": "LineVoltage",
+      "objectType": "2",
+      "objectInstance": "11205",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11206",
+      "name": "Extract.Fans.Fan2.MotorInputPower",
+      "deviceId": "121",
+      "metric": "MotorInputPower",
+      "objectType": "2",
+      "objectInstance": "11206",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:2:11207",
+      "name": "Extract.Fans.Fan2.MotorVoltage",
+      "deviceId": "121",
+      "metric": "MotorVoltage",
+      "objectType": "2",
+      "objectInstance": "11207",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": "95",
+      "bacnetType": {
+        "name": "analog_value",
+        "category": "point"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:3:10000",
+      "name": "EmergencyStop",
+      "deviceId": "121",
+      "metric": "EmergencyStop",
+      "objectType": "3",
+      "objectInstance": "10000",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "EmergencyStop"
+    },
+    {
+      "id": "121:3:10001",
+      "name": "FireAlarm",
+      "deviceId": "121",
+      "metric": "FireAlarm",
+      "objectType": "3",
+      "objectInstance": "10001",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "FireAlarm"
+    },
+    {
+      "id": "121:3:10002",
+      "name": "Supply.Fans.Fan1.Alarm",
+      "deviceId": "121",
+      "metric": "Alarm",
+      "objectType": "3",
+      "objectInstance": "10002",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:3:10003",
+      "name": "Supply.Fans.Fan2.Alarm",
+      "deviceId": "121",
+      "metric": "Alarm",
+      "objectType": "3",
+      "objectInstance": "10003",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:3:10004",
+      "name": "GetState",
+      "deviceId": "121",
+      "metric": "GetState",
+      "objectType": "3",
+      "objectInstance": "10004",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "GetState"
+    },
+    {
+      "id": "121:3:10005",
+      "name": "Exchanger.Pump1.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "3",
+      "objectInstance": "10005",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Pump1"
+    },
+    {
+      "id": "121:3:10006",
+      "name": "Exchanger.Pump2.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "3",
+      "objectInstance": "10006",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Pump2"
+    },
+    {
+      "id": "121:3:10007",
+      "name": "Extract.Fans.Fan1.Alarm",
+      "deviceId": "121",
+      "metric": "Alarm",
+      "objectType": "3",
+      "objectInstance": "10007",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:3:10008",
+      "name": "Extract.Fans.Fan2.Alarm",
+      "deviceId": "121",
+      "metric": "Alarm",
+      "objectType": "3",
+      "objectInstance": "10008",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Fans"
+    },
+    {
+      "id": "121:3:10013",
+      "name": "Supply.Humidifier.OnOff.Feedback",
+      "deviceId": "121",
+      "metric": "Feedback",
+      "objectType": "3",
+      "objectInstance": "10013",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_input",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Humidifier"
+    },
+    {
+      "id": "121:4:10000",
+      "name": "Supply.Fans.Fan1.OnOff.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10000",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "OnOff"
+    },
+    {
+      "id": "121:4:10001",
+      "name": "Supply.Fans.Fan2.OnOff.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10001",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "OnOff"
+    },
+    {
+      "id": "121:4:10002",
+      "name": "SetState",
+      "deviceId": "121",
+      "metric": "SetState",
+      "objectType": "4",
+      "objectInstance": "10002",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "SetState"
+    },
+    {
+      "id": "121:4:10003",
+      "name": "Supply.Fans.Fan1.EV.OnOff.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10003",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "OnOff"
+    },
+    {
+      "id": "121:4:10004",
+      "name": "Supply.Fans.Fan2.EV.OnOff.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10004",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "OnOff"
+    },
+    {
+      "id": "121:4:10006",
+      "name": "Supply.Humidifier.OnOff.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10006",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Humidifier"
+    },
+    {
+      "id": "121:4:10007",
+      "name": "Exchanger.Pump1.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10007",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Pump1"
+    },
+    {
+      "id": "121:4:10008",
+      "name": "Exchanger.Pump2.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10008",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Pump2"
+    },
+    {
+      "id": "121:4:10010",
+      "name": "Extract.Fans.Fan1.OnOff.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10010",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "OnOff"
+    },
+    {
+      "id": "121:4:10011",
+      "name": "Extract.Fans.Fan2.OnOff.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10011",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "OnOff"
+    },
+    {
+      "id": "121:4:10013",
+      "name": "Extract.Fans.Fan1.EV.OnOff.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10013",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "OnOff"
+    },
+    {
+      "id": "121:4:10014",
+      "name": "Extract.Fans.Fan2.EV.OnOff.Cmd",
+      "deviceId": "121",
+      "metric": "Cmd",
+      "objectType": "4",
+      "objectInstance": "10014",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_output",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "OnOff"
+    },
+    {
+      "id": "121:5:10000",
+      "name": "Temperature.Status",
+      "deviceId": "121",
+      "metric": "Status",
+      "objectType": "5",
+      "objectInstance": "10000",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_value",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Temperature"
+    },
+    {
+      "id": "121:5:10001",
+      "name": "Humidifier.Status",
+      "deviceId": "121",
+      "metric": "Status",
+      "objectType": "5",
+      "objectInstance": "10001",
+      "type": "digital",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "binary_value",
+        "category": "point"
+      },
+      "stateText": [
+        "Inactive",
+        "Active"
+      ],
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "Humidifier"
+    },
+    {
+      "id": "121:10:0",
+      "name": "CurrentConfig.xml",
+      "deviceId": "121",
+      "metric": "xml",
+      "objectType": "10",
+      "objectInstance": "0",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "file",
+        "category": "system"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "CurrentConfig"
+    },
+    {
+      "id": "121:10:1",
+      "name": "BACnetOnline_1010010.bootdata",
+      "deviceId": "121",
+      "metric": "bootdata",
+      "objectType": "10",
+      "objectInstance": "1",
+      "type": "analog",
+      "writable": false,
+      "description": null,
+      "unit": null,
+      "bacnetType": {
+        "name": "file",
+        "category": "system"
+      },
+      "stateText": null,
+      "scale": 1,
+      "offset": 0,
+      "source": null,
+      "expression": null,
+      "dependencies": null,
+      "metadata": null,
+      "equipmentId": "BACnetOnline_1010010"
+    }
+  ],
+  "hierarchy_by_point": {
+    "121:0:10000": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      }
+    },
+    "121:0:10001": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      }
+    },
+    "121:0:10002": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      }
+    },
+    "121:0:10003": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      }
+    },
+    "121:0:10004": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      }
+    },
+    "121:0:10005": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      }
+    },
+    "121:0:10006": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "IntakeDamper",
+        "name": "IntakeDamper",
+        "description": "IntakeDamper",
+        "metadata": null
+      }
+    },
+    "121:0:10007": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:0:10008": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan1",
+        "name": "Fan1",
+        "description": "Fan1",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:0:10009": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan2",
+        "name": "Fan2",
+        "description": "Fan2",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:0:10011": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Filter1",
+        "name": "Filter1",
+        "description": "Filter1",
+        "metadata": null
+      }
+    },
+    "121:0:10012": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Filter2",
+        "name": "Filter2",
+        "description": "Filter2",
+        "metadata": null
+      }
+    },
+    "121:0:10014": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Cooler",
+        "name": "Cooler",
+        "description": "Cooler",
+        "metadata": null
+      }
+    },
+    "121:0:10015": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Heater",
+        "name": "Heater",
+        "description": "Heater",
+        "metadata": null
+      }
+    },
+    "121:0:10016": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      }
+    },
+    "121:0:10017": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      }
+    },
+    "121:0:10019": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      }
+    },
+    "121:0:10020": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      }
+    },
+    "121:0:10021": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      }
+    },
+    "121:0:10022": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      }
+    },
+    "121:0:10023": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:0:10024": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "ExhaustDamper",
+        "name": "ExhaustDamper",
+        "description": "ExhaustDamper",
+        "metadata": null
+      }
+    },
+    "121:0:10025": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan1",
+        "name": "Fan1",
+        "description": "Fan1",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:0:10026": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan2",
+        "name": "Fan2",
+        "description": "Fan2",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:1:10000": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "IntakeDamper",
+        "name": "IntakeDamper",
+        "description": "IntakeDamper",
+        "metadata": null
+      }
+    },
+    "121:1:10001": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:1:10002": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:1:10003": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan1",
+        "name": "Fan1",
+        "description": "Fan1",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:1:10004": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan2",
+        "name": "Fan2",
+        "description": "Fan2",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:1:10006": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Cooler",
+        "name": "Cooler",
+        "description": "Cooler",
+        "metadata": null
+      }
+    },
+    "121:1:10007": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Heater",
+        "name": "Heater",
+        "description": "Heater",
+        "metadata": null
+      }
+    },
+    "121:1:10008": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Humidifier",
+        "name": "Humidifier",
+        "description": "Humidifier",
+        "metadata": null
+      }
+    },
+    "121:1:10009": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:1:10010": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "ExhaustDamper",
+        "name": "ExhaustDamper",
+        "description": "ExhaustDamper",
+        "metadata": null
+      }
+    },
+    "121:1:10011": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:1:10012": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan1",
+        "name": "Fan1",
+        "description": "Fan1",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:1:10013": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan2",
+        "name": "Fan2",
+        "description": "Fan2",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Damper",
+        "name": "Damper",
+        "description": "Damper",
+        "metadata": null
+      }
+    },
+    "121:2:10000": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10001": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10002": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10004": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Filter1",
+        "name": "Filter1",
+        "description": "Filter1",
+        "metadata": null
+      }
+    },
+    "121:2:10005": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Filter1",
+        "name": "Filter1",
+        "description": "Filter1",
+        "metadata": null
+      }
+    },
+    "121:2:10006": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Filter2",
+        "name": "Filter2",
+        "description": "Filter2",
+        "metadata": null
+      }
+    },
+    "121:2:10007": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Filter2",
+        "name": "Filter2",
+        "description": "Filter2",
+        "metadata": null
+      }
+    },
+    "121:2:10008": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      }
+    },
+    "121:2:10009": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Exchanger",
+        "name": "Exchanger",
+        "description": "Exchanger",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Pump1",
+        "name": "Pump1",
+        "description": "Pump1",
+        "metadata": null
+      }
+    },
+    "121:2:10010": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Exchanger",
+        "name": "Exchanger",
+        "description": "Exchanger",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Pump2",
+        "name": "Pump2",
+        "description": "Pump2",
+        "metadata": null
+      }
+    },
+    "121:2:10011": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10012": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10013": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10015": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      }
+    },
+    "121:2:10016": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Temperature",
+        "name": "Temperature",
+        "description": "Temperature",
+        "metadata": null
+      }
+    },
+    "121:2:10017": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Humidifier",
+        "name": "Humidifier",
+        "description": "Humidifier",
+        "metadata": null
+      }
+    },
+    "121:2:10100": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10101": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10102": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10103": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10104": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10105": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10106": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10107": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10200": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10201": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10202": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10203": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10204": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10205": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10206": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:10207": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11100": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11101": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11102": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11103": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11104": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11105": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11106": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11107": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11200": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11201": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11202": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11203": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11204": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11205": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11206": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:2:11207": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:3:10000": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "EmergencyStop",
+        "name": "EmergencyStop",
+        "description": "EmergencyStop",
+        "metadata": null
+      }
+    },
+    "121:3:10001": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "FireAlarm",
+        "name": "FireAlarm",
+        "description": "FireAlarm",
+        "metadata": null
+      }
+    },
+    "121:3:10002": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:3:10003": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:3:10004": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "GetState",
+        "name": "GetState",
+        "description": "GetState",
+        "metadata": null
+      }
+    },
+    "121:3:10005": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Exchanger",
+        "name": "Exchanger",
+        "description": "Exchanger",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Pump1",
+        "name": "Pump1",
+        "description": "Pump1",
+        "metadata": null
+      }
+    },
+    "121:3:10006": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Exchanger",
+        "name": "Exchanger",
+        "description": "Exchanger",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Pump2",
+        "name": "Pump2",
+        "description": "Pump2",
+        "metadata": null
+      }
+    },
+    "121:3:10007": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:3:10008": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      }
+    },
+    "121:3:10013": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Humidifier",
+        "name": "Humidifier",
+        "description": "Humidifier",
+        "metadata": null
+      }
+    },
+    "121:4:10000": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan1",
+        "name": "Fan1",
+        "description": "Fan1",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "OnOff",
+        "name": "OnOff",
+        "description": "OnOff",
+        "metadata": null
+      }
+    },
+    "121:4:10001": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan2",
+        "name": "Fan2",
+        "description": "Fan2",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "OnOff",
+        "name": "OnOff",
+        "description": "OnOff",
+        "metadata": null
+      }
+    },
+    "121:4:10002": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "SetState",
+        "name": "SetState",
+        "description": "SetState",
+        "metadata": null
+      }
+    },
+    "121:4:10003": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan1",
+        "name": "Fan1",
+        "description": "Fan1",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "OnOff",
+        "name": "OnOff",
+        "description": "OnOff",
+        "metadata": null
+      }
+    },
+    "121:4:10004": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan2",
+        "name": "Fan2",
+        "description": "Fan2",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "OnOff",
+        "name": "OnOff",
+        "description": "OnOff",
+        "metadata": null
+      }
+    },
+    "121:4:10006": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Supply",
+        "name": "Supply",
+        "description": "Supply",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Humidifier",
+        "name": "Humidifier",
+        "description": "Humidifier",
+        "metadata": null
+      }
+    },
+    "121:4:10007": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Exchanger",
+        "name": "Exchanger",
+        "description": "Exchanger",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Pump1",
+        "name": "Pump1",
+        "description": "Pump1",
+        "metadata": null
+      }
+    },
+    "121:4:10008": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "Exchanger",
+        "name": "Exchanger",
+        "description": "Exchanger",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Pump2",
+        "name": "Pump2",
+        "description": "Pump2",
+        "metadata": null
+      }
+    },
+    "121:4:10010": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan1",
+        "name": "Fan1",
+        "description": "Fan1",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "OnOff",
+        "name": "OnOff",
+        "description": "OnOff",
+        "metadata": null
+      }
+    },
+    "121:4:10011": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan2",
+        "name": "Fan2",
+        "description": "Fan2",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "OnOff",
+        "name": "OnOff",
+        "description": "OnOff",
+        "metadata": null
+      }
+    },
+    "121:4:10013": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan1",
+        "name": "Fan1",
+        "description": "Fan1",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "OnOff",
+        "name": "OnOff",
+        "description": "OnOff",
+        "metadata": null
+      }
+    },
+    "121:4:10014": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "Extract",
+        "name": "Extract",
+        "description": "Extract",
+        "metadata": null
+      },
+      "floor": {
+        "id": "Fans",
+        "name": "Fans",
+        "description": "Fans",
+        "metadata": null
+      },
+      "room": {
+        "id": "Fan2",
+        "name": "Fan2",
+        "description": "Fan2",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "OnOff",
+        "name": "OnOff",
+        "description": "OnOff",
+        "metadata": null
+      }
+    },
+    "121:5:10000": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Temperature",
+        "name": "Temperature",
+        "description": "Temperature",
+        "metadata": null
+      }
+    },
+    "121:5:10001": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "Humidifier",
+        "name": "Humidifier",
+        "description": "Humidifier",
+        "metadata": null
+      }
+    },
+    "121:10:0": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "CurrentConfig",
+        "name": "CurrentConfig",
+        "description": "CurrentConfig",
+        "metadata": null
+      }
+    },
+    "121:10:1": {
+      "site": {
+        "id": "CLIMATIZADOR 1",
+        "name": "CLIMATIZADOR 1",
+        "description": "CLIMATIZADOR 1",
+        "metadata": null
+      },
+      "building": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "floor": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "room": {
+        "id": "default",
+        "name": "default",
+        "description": "default",
+        "metadata": null
+      },
+      "equipment": {
+        "id": "BACnetOnline_1010010",
+        "name": "BACnetOnline_1010010",
+        "description": "BACnetOnline_1010010",
+        "metadata": null
+      }
+    }
+  }
+}

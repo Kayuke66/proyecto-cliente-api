@@ -35,6 +35,11 @@ ERRORS: dict[str, ErrorDef] = {
         "message": "Health check warning - Issue detected",
         "category": "warning",
     },
+    "DEVICE_NOT_FOUND": {
+        "code": "ERR_SMA_008",
+        "message": "Device not found",
+        "category": "error",
+    },
     "UNHANDLED_REJECTION": {
         "code": "ERR_SMA_006",
         "message": "Unhandled Promise Rejection",

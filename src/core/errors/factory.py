@@ -1,8 +1,15 @@
+from typing import Any
 from src.core.errors.catalog import ERRORS
 
 
-def build_error(key: str, details: list[str] | None = None, message: str | None = None):
+def build_error(
+    key: str,
+    details: list[str] | None = None,
+    message: str | None = None,
+    meta: dict[str, Any] | None = None,
+):
     err = ERRORS[key]
+
     payload = {
         "error": {
             "code": err["code"],
@@ -11,7 +18,9 @@ def build_error(key: str, details: list[str] | None = None, message: str | None 
         }
     }
 
-    if details is not None:
+    if meta is not None:
+        payload["error"]["details"] = meta
+    elif details is not None:
         payload["error"]["details"] = {"details": details}
 
     return payload

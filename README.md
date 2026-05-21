@@ -1,178 +1,142 @@
-# Santra Python API
+# Santra API Client (Python)
 
-Reimplementación en Python/FastAPI de una API originalmente construida en Node.js, empezando por el endpoint `GET /api/health`.
-
-## Objetivo
-
-Este proyecto crea una versión autónoma en Python de la API, manteniendo la arquitectura funcional del proyecto original:
-
-- rutas
-- controlador
-- servicios
-- checks de health
-- schemas de respuesta
-
-La idea no es copiar literalmente el código Node, sino trasladar su diseño y comportamiento al ecosistema Python/FastAPI.
+Cliente/API en Python con FastAPI que replica progresivamente el comportamiento de la API original de Santra Edge Agent, con foco actual en el módulo **Digital Twin**.
 
 ## Estado actual
 
-Implementado o preparado:
+A fecha de esta actualización, el proyecto ya tiene una base funcional con FastAPI, middlewares globales, manejo centralizado de errores, documentación OpenAPI personalizada y una implementación amplia del dominio Digital Twin.[web:1098]
 
-- `GET /api/health`
-- arquitectura por capas
-- checks independientes de health
-- respuesta agregada con `status`, `timestamp` y `checks`
-- documentación Swagger automática con FastAPI
+También se ha añadido persistencia local del Digital Twin para conservar devices, points y tree tras refrescar la aplicación o reiniciar el proceso, alineando el comportamiento con la versión original basada en persistencia al arranque y guardado tras importaciones.[web:1403]
 
-Pendiente:
+## Funcionalidades implementadas
 
-- migrar el resto de endpoints
-- unificar manejo de errores global
-- completar documentación técnica endpoint por endpoint
-- tests automáticos
+### Infraestructura base
 
-## Estructura recomendada
+- Aplicación FastAPI con `app.py` como punto de entrada.
+- Middlewares comunes y CORS ajustado.
+- Eliminado `Access-Control-Expose-Headers` de las respuestas CORS al retirar `expose_headers` del middleware.[web:1189]
+- Gestión centralizada de errores con `SantraError` y catálogo de errores.
+- OpenAPI/Swagger personalizado con examples y responses afinadas en varios endpoints.[web:1098]
+
+### Digital Twin
+
+#### GET implementados/corregidos
+
+- `GET /api/digital-twin/tree`
+- `GET /api/digital-twin/devices`
+- `GET /api/digital-twin/devices/{id}`
+- `GET /api/digital-twin/points`
+- `GET /api/digital-twin/devices/{id}/points`
+- `GET /api/digital-twin/equipments/{id}/points`
+
+#### Ajustes relevantes realizados
+
+- Normalización de `description` y `unit` a `""` cuando el original no devuelve `null`, evitando errores de validación de Pydantic en responses.[web:1377]
+- Ajuste de `unitId` para devolver valor numérico por defecto (`0`) en lugar de `null` cuando aplica.
+- Corrección de serialización de devices para incluir `host`, `port` y `unitId` en responses.
+- Exclusión de campos `None` en el árbol (`response_model_exclude_none=True`) para eliminar `metadata: null` y acercar la salida al formato de la API original.[web:1404]
+- Corrección de `create_device()` y `create_point()` para usar modelos reales en lugar de objetos dinámicos ad hoc.
+- Corrección de persistencia de jerarquía por punto para que el tree no salga vacío.
+
+### Importaciones
+
+#### `POST /api/digital-twin/import/ede`
+
+Implementado con:
+
+- parser de EDE
+- validador
+- intérprete
+- resolver de estructura
+- catálogo/resolver BACnet
+- persistencia inmediata tras importación
+
+Se ajustó además la documentación Swagger para mostrar un ejemplo realista en `text/plain` en lugar de `"string"`, usando ejemplos de body en FastAPI/OpenAPI.[web:1342]
+
+#### `POST /api/digital-twin/import/santra-legacy-json`
+
+Trabajo preparado y ya documentado a nivel de arquitectura, con piezas identificadas para:
+
+- parser de legacy JSON
+- intérprete principal
+- estrategias BACnet y Modbus
+- DTO de respuesta
+- integración con persistencia
+
+Queda pendiente cerrar la implementación final en código y probarla extremo a extremo.
+
+## Persistencia
+
+La versión Python ya no depende solo de memoria en runtime. Se ha introducido una capa de persistencia local para:
+
+- guardar el Digital Twin tras importaciones
+- cargar el estado persistido en el arranque mediante `lifespan`
+- mantener datos tras F5 o reinicio del proceso
+
+FastAPI soporta inicialización al arranque mediante lifespan/events, que es la base recomendada para este patrón.[web:1403][web:1395]
+
+## Estructura orientativa
 
 ```text
 src/
-  __init__.py
-  app.py
-  api/
-    __init__.py
-    routes/
-      __init__.py
-      health.py
-  controllers/
-    __init__.py
-    health_controller.py
-  services/
-    __init__.py
-    health_monitor/
-      __init__.py
-      health_monitor_service.py
-      checks/
-        __init__.py
-        health_check_interface.py
-        event_loop_check.py
-        uptime_check.py
-        memory_check.py
-  schemas/
-    __init__.py
-    health.py
+├── api/
+│   └── routes/
+├── core/
+│   ├── errors/
+│   └── ...
+├── schemas/
+├── services/
+│   ├── ingestion/
+│   │   ├── ede/
+│   │   └── santra_legacy/
+│   ├── protocols/
+│   │   ├── bacnet/
+│   │   └── modbus/
+│   ├── digital_twin_service.py
+│   ├── digital_twin_store.py
+│   ├── digital_twin_models.py
+│   └── persistence_service.py
+└── app.py
 ```
 
-## Requisitos
+## Pendiente inmediato
 
-- Python 3.11 o superior
-- `fastapi`
-- `uvicorn`
-- `pydantic`
-- `psutil`
+- Cerrar `POST /api/digital-twin/import/santra-legacy-json` en Python.
+- Retomar los POST restantes del módulo Digital Twin.
+- Revisar endpoint a endpoint la fidelidad con la API original en responses, examples y errores.
+- Añadir tests automáticos para imports y serialización.
 
-## Instalación
+## Ejecución local
 
-```bash
-python -m venv .venv
-```
-
-### Windows
-
-```bash
-.venv\Scripts\activate
-```
-
-### Linux/macOS
-
-```bash
-source .venv/bin/activate
-```
-
-Instalar dependencias:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Ejecución
-
-Desde la raíz del proyecto:
+Comandos típicos:
 
 ```bash
 uvicorn src.app:app --reload
 ```
 
-## Probar el endpoint health
-
-### Swagger
-
-Abrir:
-
-- `http://127.0.0.1:8000/docs`
-
-### Curl
+o, según tu estructura real:
 
 ```bash
-curl -X GET "http://127.0.0.1:8000/api/health" -H "accept: application/json"
+uvicorn app:app --reload
 ```
 
-## Respuesta esperada aproximada
+## Git
 
-```json
-{
-  "status": "ok",
-  "timestamp": 1716020000000,
-  "checks": {
-    "event_loop": {
-      "status": "ok",
-      "message": "",
-      "timestamp": 1716020000000,
-      "meta": {
-        "delayMs": 1.2
-      }
-    },
-    "uptime": {
-      "status": "ok",
-      "message": "",
-      "timestamp": 1716020000000,
-      "meta": {
-        "uptimeSeconds": 5
-      }
-    },
-    "memory": {
-      "status": "ok",
-      "message": "",
-      "timestamp": 1716020000000,
-      "meta": {
-        "heapUsedMb": 25.1
-      }
-    }
-  }
-}
+Flujo básico para subir cambios:
+
+```bash
+git status
+git add .
+git commit -m "docs: update README and CHANGELOG for digital twin progress"
+git push origin <tu-rama>
 ```
 
-## Diferencias respecto al proyecto Node
+Si aún no has creado rama de trabajo:
 
-- Se mantiene la misma arquitectura lógica, pero adaptada a FastAPI.
-- `Router` pasa a `APIRouter`.
-- Los DTO/interfaces de TypeScript pasan a modelos Pydantic.
-- Algunos checks se adaptan al runtime Python; por ejemplo, el control del event loop no se mide exactamente igual que en Node.
-- El objetivo es equivalencia funcional, no copia literal del runtime original.
+```bash
+git checkout -b feature/digital-twin-sync
+```
 
-## Motivo de separar este proyecto del antiguo
+## Nota técnica
 
-La carpeta antigua contenía imports y dependencias heredadas del cliente previo, como referencias a `src.api_client`, que provocaban errores de importación al arrancar la nueva API.
-
-Separar el proyecto permite:
-
-- eliminar dependencias antiguas
-- tener una arquitectura limpia
-- evitar conflictos de imports
-- documentar claramente la transición de Node a Python
-
-## Próximos pasos sugeridos
-
-1. Confirmar que `GET /api/health` funciona correctamente.
-2. Añadir tests básicos.
-3. Migrar `/api/version`.
-4. Migrar los endpoints de digital twin uno a uno.
-5. Unificar convenciones de errores y documentación OpenAPI.
+Si en `digital_twin_service.py` aparecen subrayados en rojo `SantraError` y `ERRORS`, faltan imports explícitos del modelo y del catálogo de errores. Eso es coherente con el uso que se hace en `import_santra_legacy_json()` y en otros flujos de importación.[file:1237]

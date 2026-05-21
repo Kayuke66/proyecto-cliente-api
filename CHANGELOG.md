@@ -1,38 +1,35 @@
 # Changelog
 
-Todos los cambios relevantes de este proyecto se documentarán aquí.
+## Unreleased
 
-El formato está inspirado en Keep a Changelog y el versionado seguirá Semantic Versioning cuando el proyecto quede estabilizado.
+### Added
 
-## [0.1.0] - 2026-05-18
+- Persistencia local del Digital Twin mediante servicio dedicado.
+- Carga del estado persistido al arrancar la aplicación usando lifespan.
+- Modelos reales `Device` y `Point` para el store del Digital Twin.
+- Base de implementación para importación de EDE.
+- Base de implementación/documentación para importación de Santra Legacy JSON.
 
-### Añadido
-- Estructura inicial del nuevo proyecto Python/FastAPI.
-- Documentación base del proyecto en `README.md`.
-- Endpoint inicial planificado: `GET /api/health`.
-- Arquitectura por capas inspirada en el proyecto Node original:
-  - rutas
-  - controlador
-  - servicio de health monitor
-  - checks independientes
-  - schemas Pydantic
-- Base de checks de health:
-  - `event_loop`
-  - `uptime`
-  - `memory`
-- Preparación para Swagger/OpenAPI automática.
-- Archivo `.gitignore` base para entorno Python.
-- Archivo `requirements.txt` inicial.
+### Changed
 
-### Cambiado
-- Se decide separar el nuevo desarrollo Python del proyecto antiguo para evitar conflictos de imports heredados.
-- Se adopta equivalencia funcional con la API Node en lugar de una copia literal del código fuente.
+- Ajustadas responses de endpoints de Digital Twin para alinearlas con la API original.
+- `GET /api/digital-twin/tree` ahora excluye campos `None` en la respuesta para evitar `metadata: null`.[web:1404]
+- `GET /api/digital-twin/devices` y `GET /api/digital-twin/devices/{id}` actualizados para incluir `host`, `port` y `unitId`.
+- `unitId` normalizado a valor numérico por defecto cuando no existe.
+- Normalización de `description` y `unit` a cadena vacía en DTOs de points para evitar errores de validación de Pydantic.[web:1377]
+- Documentación OpenAPI mejorada con examples reales en body y responses en varios endpoints.[web:1098]
+- Eliminado `Access-Control-Expose-Headers` de respuestas CORS al retirar `expose_headers` del middleware.[web:1189]
 
-### Corregido
-- Identificado el origen del error `ModuleNotFoundError: No module named 'src.api_client'` como dependencia residual del proyecto anterior.
+### Fixed
 
-### Pendiente
-- Implementación final y validación completa del endpoint `GET /api/health`.
-- Añadir tests automáticos.
-- Migrar el resto de endpoints.
-- Estandarizar respuestas de error.
+- Error 500 por falta de `siteId` en la response real de `import ede` cuando el `response_model` lo requería.[web:1098]
+- Error 500 en tree por `description=None` en `CompactPointDto`.[web:1377]
+- Árbol vacío por persistencia incorrecta de jerarquía de puntos en el store.
+- Error 500 en `get all points for a device` por `unit=None` en `PointDto`.[web:1377]
+- Desalineación entre respuesta real y example value en documentación Swagger/OpenAPI.[web:1098]
+
+### Pending
+
+- Implementación final y validación de `POST /api/digital-twin/import/santra-legacy-json`.
+- Continuación de los POST restantes del módulo Digital Twin.
+- Revisión de tests y cobertura.

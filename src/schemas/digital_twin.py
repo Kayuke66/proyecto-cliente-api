@@ -1,5 +1,5 @@
 from typing import Any
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class DeviceDto(BaseModel):
@@ -7,30 +7,32 @@ class DeviceDto(BaseModel):
     name: str
     description: str | None = None
     protocol: str | None = None
-    vendor: str | None = None
-    model: str | None = None
+    host: str | None = None
+    port: int | None = None
+    unitId: int = 0
 
 
 class PointDto(BaseModel):
+    model_config = ConfigDict(title="Point")
+
     id: str
     name: str
-    description: str
     deviceId: str
     metric: str
     objectType: str
     objectInstance: str
-    bacnetType: dict[str, str] | None = None
     type: str
     writable: bool
     unit: str
-    stateText: list[str] | None = None
-    scale: float | None = None
-    offset: float | None = None
-    source: str | None = None
-    expression: list[dict[str, Any]] | None = None
-    dependencies: list[str] | None = None
-    metadata: dict[str, Any] | None = None
+    description: str
 
+    bacnetType: dict[str, str] | None = Field(default=None, repr=False, exclude=True)
+    scale: float | None = Field(default=None, repr=False, exclude=True)
+    offset: float | None = Field(default=None, repr=False, exclude=True)
+    source: str | None = Field(default=None, repr=False, exclude=True)
+    expression: list[dict[str, Any]] | None = Field(default=None, repr=False, exclude=True)
+    dependencies: list[str] | None = Field(default=None, repr=False, exclude=True)
+    metadata: dict[str, Any] | None = Field(default=None, repr=False, exclude=True)
 
 class CompactPointDto(BaseModel):
     id: str
