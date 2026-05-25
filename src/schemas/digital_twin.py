@@ -17,22 +17,18 @@ class PointDto(BaseModel):
 
     id: str
     name: str
+    description: str
     deviceId: str
     metric: str
     objectType: str
     objectInstance: str
+    bacnetType: dict[str, str] | None = None
     type: str
     writable: bool
     unit: str
-    description: str
-
-    bacnetType: dict[str, str] | None = Field(default=None, repr=False, exclude=True)
-    scale: float | None = Field(default=None, repr=False, exclude=True)
-    offset: float | None = Field(default=None, repr=False, exclude=True)
-    source: str | None = Field(default=None, repr=False, exclude=True)
-    expression: list[dict[str, Any]] | None = Field(default=None, repr=False, exclude=True)
-    dependencies: list[str] | None = Field(default=None, repr=False, exclude=True)
-    metadata: dict[str, Any] | None = Field(default=None, repr=False, exclude=True)
+    stateText: list[str] | None = None
+    offset: float | int
+    source: str
 
 class CompactPointDto(BaseModel):
     id: str

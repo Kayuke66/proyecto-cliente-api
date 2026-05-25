@@ -3,6 +3,8 @@ from src.services.digital_twin_models import Device, Point
 from src.services.ingestion.ede.ede_parser import EdeParser
 from src.services.ingestion.ede.ede_validation import EdeValidator
 from src.services.ingestion.ede.ede_interpreter import EdeInterpreter
+from src.core.errors.model import SantraError
+from src.core.errors.catalog import ERRORS
 from src.services.ingestion.santra_legacy.santra_legacy_json_parser import SantraLegacyJsonParser
 from src.services.ingestion.santra_legacy.santra_legacy_json_interpreter import SantraLegacyJsonInterpreter
 
@@ -142,16 +144,16 @@ class DigitalTwinService:
                     metric=point.metric,
                     objectType=point.objectType,
                     objectInstance=point.objectInstance,
-                    bacnetType=getattr(point, "bacnetType", None),
+                    bacnetType=getattr(point, "bacnetType"),
                     type=point.type,
                     writable=point.writable,
                     unit=getattr(point, "unit", "") or "",
-                    stateText=getattr(point, "stateText", None),
-                    scale=getattr(point, "scale", None),
-                    offset=getattr(point, "offset", None),
-                    source=getattr(point, "source", None),
-                    expression=getattr(point, "expression", None),
-                    dependencies=getattr(point, "dependencies", None),
+                    stateText=getattr(point, "stateText"),
+                    scale=getattr(point, "scale"),
+                    offset=getattr(point, "offset"),
+                    source=getattr(point, "source"),
+                    expression=getattr(point, "expression"),
+                    dependencies=getattr(point, "dependencies"),
                     metadata=getattr(point, "metadata", None),
                 ).model_dump()
             )
@@ -166,21 +168,21 @@ class DigitalTwinService:
                 PointDto(
                     id=point.id,
                     name=point.name,
-                    description=point.description,
+                    description=getattr(point, "description", "") or "",
                     deviceId=point.deviceId,
                     metric=point.metric,
                     objectType=point.objectType,
                     objectInstance=point.objectInstance,
-                    bacnetType=getattr(point, "bacnetType", None),
+                    bacnetType=getattr(point, "bacnetType"),
                     type=point.type,
                     writable=point.writable,
-                    unit=point.unit,
-                    stateText=getattr(point, "stateText", None),
-                    scale=getattr(point, "scale", None),
-                    offset=getattr(point, "offset", None),
-                    source=getattr(point, "source", None),
-                    expression=getattr(point, "expression", None),
-                    dependencies=getattr(point, "dependencies", None),
+                    unit=getattr(point, "unit", "") or "",
+                    stateText=getattr(point, "stateText"),
+                    scale=getattr(point, "scale"),
+                    offset=getattr(point, "offset"),
+                    source=getattr(point, "source"),
+                    expression=getattr(point, "expression"),
+                    dependencies=getattr(point, "dependencies"),
                     metadata=getattr(point, "metadata", None),
                 ).model_dump()
             )
@@ -200,16 +202,16 @@ class DigitalTwinService:
                     metric=point.metric,
                     objectType=point.objectType,
                     objectInstance=point.objectInstance,
-                    bacnetType=getattr(point, "bacnetType", None),
+                    bacnetType=getattr(point, "bacnetType"),
                     type=point.type,
                     writable=point.writable,
                     unit=getattr(point, "unit", "") or "",
-                    stateText=getattr(point, "stateText", None),
-                    scale=getattr(point, "scale", None),
-                    offset=getattr(point, "offset", None),
-                    source=getattr(point, "source", None),
-                    expression=getattr(point, "expression", None),
-                    dependencies=getattr(point, "dependencies", None),
+                    stateText=getattr(point, "stateText"),
+                    scale=getattr(point, "scale"),
+                    offset=getattr(point, "offset"),
+                    source=getattr(point, "source"),
+                    expression=getattr(point, "expression"),
+                    dependencies=getattr(point, "dependencies"),
                     metadata=getattr(point, "metadata", None),
                 ).model_dump()
             )

@@ -50,4 +50,19 @@ ERRORS: dict[str, ErrorDef] = {
         "message": "EDE file validation failed",
         "category": "error",
     },
+    "SANTRA_LEGACY_JSON_INVALID": {
+        "code": "ERR_SMA_010",
+        "message": "Invalid Santra Legacy JSON content",
+        "category": "error",
+    },
+    "IMPORT_SANTRA_LEGACY_FAILED": {
+        "code": "ERR_SMA_011",
+        "message": "Failed to import Santra Legacy JSON",
+        "category": "error",
+    },
+    "UNSUPPORTED_PROTOCOL": {
+        "code": "ERR_SMA_018",
+        "message": "Unsupported protocol",
+        "category": "error",
+    },
 }

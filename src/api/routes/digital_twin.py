@@ -1,10 +1,15 @@
 import json
 from typing import Any
+
 from fastapi import APIRouter, Body, HTTPException
 from fastapi.responses import JSONResponse
 
 from src.schemas.digital_twin import SiteNodeDto, DeviceDto, PointDto
-from src.schemas.imports import ImportEdeResponseDto, ImportSantraLegacyResponseDto
+from src.schemas.imports import (
+    ImportEdeResponseDto,
+    ImportSantraLegacyResponseDto,
+    SantraLegacyJson,
+)
 from src.services.digital_twin_service import DigitalTwinService
 from src.services.digital_twin_store import digital_twin
 from src.services.persistence_service import PersistenceService
@@ -23,15 +28,31 @@ service.init()
     "/api/digital-twin/import/ede",
     tags=["Digital-Twin"],
     summary="Import Digital Twin model from EDE file content",
-    response_model=ImportEdeResponseDto,
     responses={
         200: {
             "description": "EDE successfully imported",
             "content": {
                 "application/json": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "siteId": {"type": "string"},
+                            "devices": {"type": "integer"},
+                            "points": {"type": "integer"},
+                            "structureSource": {
+                                "anyOf": [
+                                    {"type": "object"},
+                                    {"type": "null"}
+                                ]
+                            },
+                        },
+                        "required": ["siteId", "devices", "points"],
+                    },
                     "example": {
+                        "siteId": "default",
                         "devices": 0,
                         "points": 0,
+                        "structureSource": None,
                     }
                 }
             },
@@ -72,37 +93,105 @@ async def import_ede(
             status_code=400,
         )
 
-    return ImportEdeResponseDto(
-        siteId=result["siteId"],
-        devices=result["devices"],
-        points=result["points"],
-        structureSource=result.get("structureStats"),
-    )
+    return {
+        "siteId": result["siteId"],
+        "devices": result["devices"],
+        "points": result["points"],
+        "structureSource": result.get("structureStats"),
+    }
 
 @router.post(
     "/api/digital-twin/import/santra-legacy-json",
     tags=["Digital-Twin"],
-    summary="Import a Santra Legacy JSON into the Digital Twin",
+    summary="Import Santra Legacy JSON",
     response_model=ImportSantraLegacyResponseDto,
     responses={
         200: {
-            "description": "Santra Legacy JSON imported successfully",
+            "description": "Import successful",
             "content": {
                 "application/json": {
                     "example": {
-                        "siteId": "site_1",
-                        "devices": 5,
-                        "points": 120
+                        "siteId": "TESTSITE",
+                        "devices": 10,
+                        "points": 250,
                     }
                 }
             },
         },
         400: {
-            "description": "Invalid Santra Legacy JSON payload",
+            "description": "Invalid input",
         },
+        500: {
+            "description": "Import failed",
+        }
     },
 )
-async def import_santra_legacy_json(content: dict[str, Any] = Body(...)):
+async def import_santra_legacy_json(
+    content: dict[str, Any] = Body(
+        ...,
+        media_type="application/json",
+        example={
+            "idPlanta": "TESTSITE",
+            "denominacion": "Test Site",
+            "legalEntity": "B88888888",
+            "language": "fr",
+            "dispositivos": [
+                {
+                    "device_id": "string",
+                    "device_name": "string",
+                    "protocolo": "string",
+                    "host": "string",
+                    "puntos": [
+                        {
+                            "add": "5-20",
+                            "shortName": "string",
+                            "desc": "string",
+                            "escala": 0,
+                            "desplazamiento": 0,
+                            "digital": True,
+                            "unidad": "string",
+                            "write": True,
+                            "area": "string"
+                        }
+                    ]
+                }
+            ],
+            "deltas": [
+                {
+                    "add": "string",
+                    "punto": {
+                        "add": "5-20",
+                        "shortName": "string",
+                        "desc": "string",
+                        "escala": 0,
+                        "desplazamiento": 0,
+                        "digital": True,
+                        "unidad": "string",
+                        "write": True,
+                        "area": "string"
+                    }
+                }
+            ],
+            "calculados": [
+                {
+                    "add": "string",
+                    "desc": "string",
+                    "area": "string",
+                    "unidad": "string",
+                    "escala": 0,
+                    "datos": [
+                        {
+                            "device_id": 0,
+                            "add": "string",
+                            "valor": 0,
+                            "operacion": "string"
+                        }
+                    ]
+                }
+            ]
+        }
+    )
+):
     if not content or not isinstance(content, dict):
         err = ERRORS["SANTRA_LEGACY_JSON_INVALID"]
         raise SantraError(

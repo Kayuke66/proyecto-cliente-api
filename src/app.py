@@ -10,6 +10,13 @@ from starlette.responses import Response as StarletteResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from contextlib import asynccontextmanager
 
+from src.schemas.imports import (
+    SantraLegacyJson,
+    SantraLegacyDevice,
+    SantraLegacyPoint,
+    SantraLegacyDelta,
+    SantraLegacyCalculated,
+)
 from src.core.errors.factory import build_error
 from src.api.routes.digital_twin import router as digital_twin_router, persistence, service
 from src.api.routes.health import router as health_router
@@ -50,7 +57,7 @@ def custom_openapi():
 
     openapi_schema = get_openapi(
         title=app.title,
-        version="0.1.0",
+        version="1.0.0",
         description=app.description,
         routes=app.routes,
         tags=tags_metadata,
@@ -63,6 +70,11 @@ def custom_openapi():
             operation.get("responses", {}).pop("422", None)
 
     schemas = openapi_schema.get("components", {}).get("schemas", {})
+    schemas.setdefault("SantraLegacyPoint", SantraLegacyPoint.model_json_schema())
+    schemas.setdefault("SantraLegacyDevice", SantraLegacyDevice.model_json_schema())
+    schemas.setdefault("SantraLegacyDelta", SantraLegacyDelta.model_json_schema())
+    schemas.setdefault("SantraLegacyCalculated", SantraLegacyCalculated.model_json_schema())
+    schemas.setdefault("SantraLegacyJson", SantraLegacyJson.model_json_schema())
     schemas.pop("HealthCheckResult", None)
     schemas.pop("HealthResponseDto", None)
     schemas.pop("VersionResponseDto", None)
@@ -76,6 +88,24 @@ def custom_openapi():
     schemas.pop("EquipmentNodeDto", None)
     schemas.pop("FloorNodeDto", None)
 
+
+    desired_order = [
+        "PointDto",
+        "SantraLegacyJson",
+        "SantraLegacyDevice",
+        "SantraLegacyPoint",
+        "SantraLegacyDelta",
+        "SantraLegacyCalculated",
+        "ImportSantraLegacyResponse",
+    ]
+    ordered_schemas = {}
+    for schema_name in desired_order:
+        if schema_name in schemas:
+            ordered_schemas[schema_name] = schemas.pop(schema_name)
+
+    ordered_schemas.update(schemas)
+
+    openapi_schema["components"]["schemas"] = ordered_schemas
 
     app.openapi_schema = openapi_schema
     return app.openapi_schema
