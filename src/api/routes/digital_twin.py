@@ -1,7 +1,7 @@
 import json
 from typing import Any
 
-from fastapi import APIRouter, Body, HTTPException
+from fastapi import APIRouter, Body, HTTPException, status
 from fastapi.responses import JSONResponse
 
 from src.schemas.digital_twin import SiteNodeDto, DeviceDto, PointDto
@@ -9,6 +9,7 @@ from src.schemas.imports import (
     ImportEdeResponseDto,
     ImportSantraLegacyResponseDto,
     SantraLegacyJson,
+    SaveDigitalTwinResponseDto
 )
 from src.services.digital_twin_service import DigitalTwinService
 from src.services.digital_twin_store import digital_twin
@@ -407,3 +408,28 @@ async def get_points_by_equipment(id: str):
 )
 async def get_all_points():
     return service.get_points()
+
+
+@router.post(
+    "/api/digital-twin/save",
+    tags=["Digital-Twin"],
+    summary="Save current Digital Twin model",
+    description="Persists the current in-memory Digital Twin snapshot.",
+    status_code=status.HTTP_201_CREATED,
+    response_model=SaveDigitalTwinResponseDto,
+    responses={
+        201: {
+            "description": "Model saved successfully",
+            "content": {
+                "application/json": {
+                    "example": {
+                        "status": "ok"
+                    }
+                }
+            },
+        },
+    },
+)
+async def save_digital_twin():
+    service.save()
+    return SaveDigitalTwinResponseDto(status="ok")

@@ -2,6 +2,11 @@ from typing import Any
 from pydantic import BaseModel, ConfigDict, Field
 
 
+class SaveDigitalTwinResponseDto(BaseModel):
+    model_config = ConfigDict(title="SaveDigitalTwinResponse")
+
+    status: str = Field(..., example="ok")
+
 class ImportEdeResponseDto(BaseModel):
     model_config = ConfigDict(title="ImportEdeResponse")
 
@@ -17,7 +22,6 @@ class ImportSantraLegacyResponseDto(BaseModel):
     devices: int = Field(..., example= 10)
     points: int = Field(..., example= 250)
 
-
 class SantraLegacyPoint(BaseModel):
     model_config = ConfigDict(title="SantraLegacyPoint")
 
@@ -31,7 +35,6 @@ class SantraLegacyPoint(BaseModel):
     write: bool
     area: str
 
-
 class SantraLegacyDevice(BaseModel):
     model_config = ConfigDict(title="SantraLegacyDevice")
 
@@ -41,13 +44,11 @@ class SantraLegacyDevice(BaseModel):
     host: str
     puntos: list[SantraLegacyPoint] = Field(default_factory=list)
 
-
 class SantraLegacyDelta(BaseModel):
     model_config = ConfigDict(title="SantraLegacyDelta")
 
     add: str
     punto: SantraLegacyPoint = Field(default_factory=list)
-
 
 class SantraLegacyCalculated(BaseModel):
     add: str
@@ -76,7 +77,6 @@ class SantraLegacyCalculated(BaseModel):
             }
         },
     )
-
 
 class SantraLegacyJson(BaseModel):
     model_config = ConfigDict(title="SantraLegacyJson")
