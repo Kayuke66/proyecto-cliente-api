@@ -246,8 +246,9 @@ async def get_hierachical_digital_twin_tree():
                             "name": "string",
                             "description": "string",
                             "protocol": "string",
-                            "vendor": "string",
-                            "model": "string",
+                            "host": "string",
+                            "port": "string",
+                            "unitId": "string"
                         }
                     ]
                 }
@@ -434,12 +435,13 @@ async def save_digital_twin():
     service.save()
     return SaveDigitalTwinResponseDto(status="ok")
 
-@router.post(
+@router.get(
     "/api/digital-twin/load",
     tags=["Digital-Twin"],
-    summary="Load Digital Twin from persistence",
+    summary="Load Digital Twin model from persistence",
     status_code=status.HTTP_200_OK,
     response_model=LoadDigitalTwinResponseDto,
+    description="Replaces the current in-memory model with the persisted snapshot.",
     responses={
         200: {
             "description": "Model loaded successfully",
@@ -447,6 +449,20 @@ async def save_digital_twin():
                 "application/json": {
                     "example": {
                         "status": "ok"
+                    }
+                }
+            },
+        },
+        500: {
+            "description": "Failed to load the model",
+            "content": {
+                "application/json": {
+                    "example": {
+                        "error": {
+                            "code": "PERSISTENCE_LOAD_FAILED",
+                            "message": "Unable to load Digital Twin from persistence",
+                            "category": "PERSISTENCE",
+                        }
                     }
                 }
             },

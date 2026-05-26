@@ -82,13 +82,11 @@ def custom_openapi():
     schemas.pop("ValidationError", None)
     schemas.pop("BuildingNodeDto", None)
     schemas.pop("CompactPointDto", None)
-    schemas.pop("DeviceDto", None)
     schemas.pop("SiteNodeDto", None)
     schemas.pop("RoomNodeDto", None)
     schemas.pop("EquipmentNodeDto", None)
     schemas.pop("FloorNodeDto", None)
-    schemas.pop("SaveDigitalTwinResponse", None)
-    schemas.pop("LoadDigitalTwinResponse", None)
+
 
     desired_order = [
         "PointDto",

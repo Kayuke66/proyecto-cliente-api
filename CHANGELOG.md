@@ -1,35 +1,37 @@
 # Changelog
 
-## Unreleased
+Todos los cambios relevantes de este proyecto se documentan aquí.
 
-### Added
+El formato está inspirado en Keep a Changelog. El versionado podrá ajustarse más adelante cuando el proyecto entre en fase de estabilización completa.
 
-- Persistencia local del Digital Twin mediante servicio dedicado.
-- Carga del estado persistido al arrancar la aplicación usando lifespan.
-- Modelos reales `Device` y `Point` para el store del Digital Twin.
-- Base de implementación para importación de EDE.
-- Base de implementación/documentación para importación de Santra Legacy JSON.
+## [1.0.0] - 2026-05-26
 
-### Changed
+### Añadido
+- Reimplementación en Python/FastAPI del backend base originalmente desarrollado en Node.js/Express.
+- Documentación definitiva del proyecto en `README.md`.
+- Base de dependencias del proyecto en `requirements.txt`.
+- Endpoint `GET /api/health` con estructura equivalente a la del sistema original.
+- Endpoint `GET /api/version`.
+- Migración del dominio principal de Digital Twin.
+- Endpoints de consulta para Digital Twin, devices y points.
+- Endpoint `POST /api/digital-twin/save`.
+- Endpoint `POST /api/digital-twin/load`.
+- Soporte de persistencia para guardado y carga del estado del Digital Twin.
+- Respuestas JSON simples y consistentes para operaciones de save/load.
+- Base de errores de dominio para fallos de persistencia.
+- Documentación Swagger/OpenAPI ajustada para mostrar las responses relevantes de cada endpoint.
 
-- Ajustadas responses de endpoints de Digital Twin para alinearlas con la API original.
-- `GET /api/digital-twin/tree` ahora excluye campos `None` en la respuesta para evitar `metadata: null`.[web:1404]
-- `GET /api/digital-twin/devices` y `GET /api/digital-twin/devices/{id}` actualizados para incluir `host`, `port` y `unitId`.
-- `unitId` normalizado a valor numérico por defecto cuando no existe.
-- Normalización de `description` y `unit` a cadena vacía en DTOs de points para evitar errores de validación de Pydantic.[web:1377]
-- Documentación OpenAPI mejorada con examples reales en body y responses en varios endpoints.[web:1098]
-- Eliminado `Access-Control-Expose-Headers` de respuestas CORS al retirar `expose_headers` del middleware.[web:1189]
+### Cambiado
+- Se consolida la migración como proyecto Python autónomo, separado del cliente anterior y de dependencias residuales heredadas.
+- Se adopta FastAPI como framework principal para reemplazar la capa HTTP del backend Node original.
+- Se adapta la documentación OpenAPI para priorizar claridad en responses y reducir ruido visual en schemas de endpoints simples.
+- Se mantiene equivalencia funcional con el sistema original, traduciendo la implementación a convenciones idiomáticas de Python.
 
-### Fixed
+### Corregido
+- Resolución de problemas iniciales derivados de imports y estructura heredada del proyecto previo.
+- Ajustes en documentación Swagger para evitar exposición innecesaria de schemas en endpoints simples.
+- Verificación funcional del flujo `save`/`load` del Digital Twin.
 
-- Error 500 por falta de `siteId` en la response real de `import ede` cuando el `response_model` lo requería.[web:1098]
-- Error 500 en tree por `description=None` en `CompactPointDto`.[web:1377]
-- Árbol vacío por persistencia incorrecta de jerarquía de puntos en el store.
-- Error 500 en `get all points for a device` por `unit=None` en `PointDto`.[web:1377]
-- Desalineación entre respuesta real y example value en documentación Swagger/OpenAPI.[web:1098]
-
-### Pending
-
-- Implementación final y validación de `POST /api/digital-twin/import/santra-legacy-json`.
-- Continuación de los POST restantes del módulo Digital Twin.
-- Revisión de tests y cobertura.
+### Estado
+- Proyecto listo para revisión final frente al backend original.
+- Base preparada para detectar y completar posibles diferencias menores restantes.

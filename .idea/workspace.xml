@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b5e9a4a7-5ff3-43af-a97d-7171a897a919" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/routes/digital_twin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/digital_twin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/imports.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/digital_twin_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/digital_twin_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/system_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/system_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +183,8 @@
       <workItem from="1779257771916" duration="15619000" />
       <workItem from="1779344052287" duration="16271000" />
       <workItem from="1779689508635" duration="17250000" />
-      <workItem from="1779775772631" duration="3163000" />
+      <workItem from="1779775772631" duration="7348000" />
+      <workItem from="1779784973178" duration="4798000" />
     </task>
     <servers />
   </component>

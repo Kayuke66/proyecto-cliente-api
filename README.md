@@ -1,142 +1,203 @@
-# Santra API Client (Python)
+# SANTRA Python API
 
-Cliente/API en Python con FastAPI que replica progresivamente el comportamiento de la API original de Santra Edge Agent, con foco actual en el módulo **Digital Twin**.
+Reimplementación en Python/FastAPI del backend original en Node.js/Express para el módulo de Digital Twin,
+manteniendo la equivalencia funcional de los endpoints, la separación por capas y la documentación OpenAPI.
 
-## Estado actual
+## Descripción
 
-A fecha de esta actualización, el proyecto ya tiene una base funcional con FastAPI, middlewares globales, manejo centralizado de errores, documentación OpenAPI personalizada y una implementación amplia del dominio Digital Twin.[web:1098]
+Este proyecto traslada a Python la lógica principal del servicio original, adaptando su arquitectura al 
+ecosistema FastAPI sin perder el comportamiento esperado del backend fuente. El objetivo no ha sido copiar literalmente 
+el código TypeScript, sino reconstruir sus contratos, respuestas, flujo de persistencia y organización interna de forma 
+idiomática en Python.
 
-También se ha añadido persistencia local del Digital Twin para conservar devices, points y tree tras refrescar la aplicación o reiniciar el proceso, alineando el comportamiento con la versión original basada en persistencia al arranque y guardado tras importaciones.[web:1403]
+La migración se ha centrado especialmente en:
 
-## Funcionalidades implementadas
+- endpoint de health del sistema
+- endpoint de versión
+- endpoints del dominio Digital Twin
+- persistencia del estado del Digital Twin
+- documentación Swagger/OpenAPI adaptada
+- manejo coherente de errores mediante excepciones de dominio
 
-### Infraestructura base
+## Objetivo del proyecto
 
-- Aplicación FastAPI con `app.py` como punto de entrada.
-- Middlewares comunes y CORS ajustado.
-- Eliminado `Access-Control-Expose-Headers` de las respuestas CORS al retirar `expose_headers` del middleware.[web:1189]
-- Gestión centralizada de errores con `SantraError` y catálogo de errores.
-- OpenAPI/Swagger personalizado con examples y responses afinadas en varios endpoints.[web:1098]
+Los objetivos principales han sido:
 
-### Digital Twin
+- construir una API Python autónoma y desacoplada del proyecto cliente anterior
+- mantener equivalencia funcional con la API original
+- conservar una arquitectura limpia por capas: rutas, controladores, servicios y persistencia
+- documentar los endpoints en Swagger con ejemplos y respuestas útiles
+- dejar una base mantenible para revisar y completar diferencias con el proyecto original
 
-#### GET implementados/corregidos
+## Alcance funcional completado
 
-- `GET /api/digital-twin/tree`
-- `GET /api/digital-twin/devices`
-- `GET /api/digital-twin/devices/{id}`
-- `GET /api/digital-twin/points`
-- `GET /api/digital-twin/devices/{id}/points`
-- `GET /api/digital-twin/equipments/{id}/points`
+A nivel de migración, el proyecto ha quedado preparado o implementado con esta cobertura funcional:
 
-#### Ajustes relevantes realizados
+- `GET /api/health`
+- `GET /api/version`
+- endpoints de lectura del Digital Twin
+- endpoints de consulta de devices y points
+- `POST /api/digital-twin/save`
+- `POST /api/digital-twin/load`
+- respuestas JSON alineadas con el contrato funcional esperado
+- documentación OpenAPI/Swagger ajustada para mostrar las responses relevantes
 
-- Normalización de `description` y `unit` a `""` cuando el original no devuelve `null`, evitando errores de validación de Pydantic en responses.[web:1377]
-- Ajuste de `unitId` para devolver valor numérico por defecto (`0`) en lugar de `null` cuando aplica.
-- Corrección de serialización de devices para incluir `host`, `port` y `unitId` en responses.
-- Exclusión de campos `None` en el árbol (`response_model_exclude_none=True`) para eliminar `metadata: null` y acercar la salida al formato de la API original.[web:1404]
-- Corrección de `create_device()` y `create_point()` para usar modelos reales en lugar de objetos dinámicos ad hoc.
-- Corrección de persistencia de jerarquía por punto para que el tree no salga vacío.
+## Arquitectura
 
-### Importaciones
+La API se ha diseñado con una estructura inspirada en el proyecto original, pero adaptada a FastAPI y Python:
 
-#### `POST /api/digital-twin/import/ede`
+- **routes**: definición de endpoints HTTP y metadatos OpenAPI
+- **controllers / handlers**: capa de entrada cuando aplica, orientada a mantener claridad de responsabilidades
+- **services**: lógica principal de negocio
+- **persistence**: guardado y carga del estado del Digital Twin
+- **schemas / dto**: modelos Pydantic para request/response cuando interesa documentar o validar
+- **errors**: errores de dominio y catálogo de errores
 
-Implementado con:
+Esta separación permite mantener el comportamiento del backend original con una organización más predecible
+y fácil de exponer en revisión técnica.
 
-- parser de EDE
-- validador
-- intérprete
-- resolver de estructura
-- catálogo/resolver BACnet
-- persistencia inmediata tras importación
+## Comportamiento del Digital Twin
 
-Se ajustó además la documentación Swagger para mostrar un ejemplo realista en `text/plain` en lugar de `"string"`, usando ejemplos de body en FastAPI/OpenAPI.[web:1342]
+El módulo Digital Twin es el núcleo del proyecto.
 
-#### `POST /api/digital-twin/import/santra-legacy-json`
+Su funcionamiento general es:
 
-Trabajo preparado y ya documentado a nivel de arquitectura, con piezas identificadas para:
+1. La API expone endpoints para consultar el estado del Digital Twin, devices y points.
+2. El servicio central mantiene el estado del modelo en memoria.
+3. La capa de persistencia permite guardar ese estado de forma explícita mediante `save`.
+4. El endpoint `load` recupera desde persistencia el modelo previamente almacenado y reemplaza el estado actual en memoria.
+5. Ante fallos de persistencia, el servicio transforma la excepción en un error de dominio consistente.
 
-- parser de legacy JSON
-- intérprete principal
-- estrategias BACnet y Modbus
-- DTO de respuesta
-- integración con persistencia
+### Save
 
-Queda pendiente cerrar la implementación final en código y probarla extremo a extremo.
+El endpoint de guardado:
 
-## Persistencia
+- no requiere body
+- ejecuta la operación de persistencia del modelo actual
+- devuelve `201 Created`
+- responde con:
 
-La versión Python ya no depende solo de memoria en runtime. Se ha introducido una capa de persistencia local para:
-
-- guardar el Digital Twin tras importaciones
-- cargar el estado persistido en el arranque mediante `lifespan`
-- mantener datos tras F5 o reinicio del proceso
-
-FastAPI soporta inicialización al arranque mediante lifespan/events, que es la base recomendada para este patrón.[web:1403][web:1395]
-
-## Estructura orientativa
-
-```text
-src/
-├── api/
-│   └── routes/
-├── core/
-│   ├── errors/
-│   └── ...
-├── schemas/
-├── services/
-│   ├── ingestion/
-│   │   ├── ede/
-│   │   └── santra_legacy/
-│   ├── protocols/
-│   │   ├── bacnet/
-│   │   └── modbus/
-│   ├── digital_twin_service.py
-│   ├── digital_twin_store.py
-│   ├── digital_twin_models.py
-│   └── persistence_service.py
-└── app.py
+```json
+{
+  "status": "ok"
+}
 ```
 
-## Pendiente inmediato
+### Load
 
-- Cerrar `POST /api/digital-twin/import/santra-legacy-json` en Python.
-- Retomar los POST restantes del módulo Digital Twin.
-- Revisar endpoint a endpoint la fidelidad con la API original en responses, examples y errores.
-- Añadir tests automáticos para imports y serialización.
+El endpoint de carga:
 
-## Ejecución local
+- no requiere body
+- recupera el estado del Digital Twin desde persistencia
+- sustituye el modelo actual en memoria por el cargado
+- devuelve `200 OK`
+- responde con:
 
-Comandos típicos:
+```json
+{
+  "status": "ok"
+}
+```
+
+## Documentación OpenAPI
+
+Se ha trabajado la documentación Swagger para que refleje correctamente el comportamiento útil de la API
+sin sobrecargar innecesariamente la vista de schemas.
+
+Entre los ajustes realizados:
+
+- definición explícita de respuestas por endpoint
+- ejemplos de respuestas JSON donde aporta valor
+- control de visibilidad de schemas en endpoints simples como `save` y `load`
+- adaptación de modelos de respuesta para que la documentación sea más clara para consumo y revisión
+
+## Requisitos
+
+- Python 3.11 o superior
+- `fastapi`
+- `uvicorn`
+- `pydantic`
+- `psutil`
+
+## Instalación
+
+```bash
+python -m venv .venv
+```
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux/macOS
+
+```bash
+source .venv/bin/activate
+```
+
+Instalación de dependencias:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Ejecución
+
+Desde la raíz del proyecto, arrancar la aplicación con Uvicorn usando el módulo donde esté declarada la app FastAPI. 
+Un ejemplo habitual sería:
 
 ```bash
 uvicorn src.app:app --reload
 ```
 
-o, según tu estructura real:
+Si la aplicación principal está en otro archivo, debe sustituirse esa ruta por la real del proyecto.
 
-```bash
-uvicorn app:app --reload
-```
+## Uso y verificación
 
-## Git
+### Swagger
 
-Flujo básico para subir cambios:
+Abrir en navegador:
 
-```bash
-git status
-git add .
-git commit -m "docs: update README and CHANGELOG for digital twin progress"
-git push origin <tu-rama>
-```
+- `http://127.0.0.1:8000/docs`
 
-Si aún no has creado rama de trabajo:
+### Comprobaciones recomendadas
 
-```bash
-git checkout -b feature/digital-twin-sync
-```
+- verificar `GET /api/health`
+- verificar `GET /api/version`
+- revisar en Swagger los endpoints del dominio Digital Twin
+- comprobar persistencia con `POST /api/digital-twin/save`
+- reinicializar o alterar el estado en memoria si procede
+- recuperar el estado con `POST /api/digital-twin/load`
 
-## Nota técnica
+## Equivalencia con el proyecto original
 
-Si en `digital_twin_service.py` aparecen subrayados en rojo `SantraError` y `ERRORS`, faltan imports explícitos del modelo y del catálogo de errores. Eso es coherente con el uso que se hace en `import_santra_legacy_json()` y en otros flujos de importación.[file:1237]
+La migración ha seguido una estrategia de equivalencia funcional:
+
+- mismas responsabilidades por capa
+- mismo flujo general de guardado y carga
+- respuestas HTTP alineadas con el backend original
+- adaptación de DTOs TypeScript a modelos Pydantic cuando tiene sentido
+- diferencias mínimas debidas al runtime Python/FastAPI frente a Node/Express
+
+En otras palabras, se ha priorizado reproducir el comportamiento observable y la intención del sistema original 
+que clonar literalmente su implementación.
+
+## Estado final
+
+En este punto el proyecto queda en un estado válido para:
+
+- revisión funcional
+- demostración ante supervisor
+- comparación final contra el proyecto original
+- identificación de endpoints o detalles menores aún no migrados
+
+## Próximo paso recomendado
+
+El siguiente trabajo lógico es hacer una revisión comparativa final contra el backend original para detectar:
+
+- endpoints no migrados
+- diferencias menores en documentación o códigos de respuesta
+- campos opcionales pendientes
+- detalles de persistencia o errores de dominio aún mejorables
