@@ -331,3 +331,30 @@ class DigitalTwinService:
                 status_code=500,
             )
 
+    def save(self) -> None:
+        try:
+            self.persistence.save_digital_twin(self.digital_twin)
+        except Exception as error:
+            err = ERRORS["PERSISTENCE_SAVE_FAILED"]
+            raise SantraError(
+                code=err["code"],
+                message=err["message"],
+                category=err["category"],
+                module="DigitalTwinService.save",
+                meta={"error": str(error)},
+                status_code=500,
+            )
+
+    def load(self) -> None:
+        try:
+            self.digital_twin = self.persistence.load_digital_twin()
+        except Exception as error:
+            err = ERRORS["PERSISTENCE_LOAD_FAILED"]
+            raise SantraError(
+                code=err["code"],
+                message=err["message"],
+                category=err["category"],
+                module="DigitalTwinService.load",
+                meta={"error": str(error)},
+                status_code=500,
+            )

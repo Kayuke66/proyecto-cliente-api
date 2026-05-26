@@ -9,7 +9,8 @@ from src.schemas.imports import (
     ImportEdeResponseDto,
     ImportSantraLegacyResponseDto,
     SantraLegacyJson,
-    SaveDigitalTwinResponseDto
+    SaveDigitalTwinResponseDto,
+    LoadDigitalTwinResponseDto
 )
 from src.services.digital_twin_service import DigitalTwinService
 from src.services.digital_twin_store import digital_twin
@@ -245,9 +246,8 @@ async def get_hierachical_digital_twin_tree():
                             "name": "string",
                             "description": "string",
                             "protocol": "string",
-                            "host": "string",
-                            "port": "string",
-                            "unitId": "string"
+                            "vendor": "string",
+                            "model": "string",
                         }
                     ]
                 }
@@ -433,3 +433,26 @@ async def get_all_points():
 async def save_digital_twin():
     service.save()
     return SaveDigitalTwinResponseDto(status="ok")
+
+@router.post(
+    "/api/digital-twin/load",
+    tags=["Digital-Twin"],
+    summary="Load Digital Twin from persistence",
+    status_code=status.HTTP_200_OK,
+    response_model=LoadDigitalTwinResponseDto,
+    responses={
+        200: {
+            "description": "Model loaded successfully",
+            "content": {
+                "application/json": {
+                    "example": {
+                        "status": "ok"
+                    }
+                }
+            },
+        },
+    },
+)
+async def load_digital_twin():
+    service.load()
+    return LoadDigitalTwinResponseDto(status="ok")

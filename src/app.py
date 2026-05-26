@@ -87,7 +87,8 @@ def custom_openapi():
     schemas.pop("RoomNodeDto", None)
     schemas.pop("EquipmentNodeDto", None)
     schemas.pop("FloorNodeDto", None)
-
+    schemas.pop("SaveDigitalTwinResponse", None)
+    schemas.pop("LoadDigitalTwinResponse", None)
 
     desired_order = [
         "PointDto",

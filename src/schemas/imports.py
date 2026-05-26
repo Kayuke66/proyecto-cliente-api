@@ -7,6 +7,11 @@ class SaveDigitalTwinResponseDto(BaseModel):
 
     status: str = Field(..., example="ok")
 
+class LoadDigitalTwinResponseDto(BaseModel):
+    model_config = ConfigDict(title="LoadDigitalTwinResponse")
+
+    status: str = Field(..., example="ok")
+
 class ImportEdeResponseDto(BaseModel):
     model_config = ConfigDict(title="ImportEdeResponse")
 
