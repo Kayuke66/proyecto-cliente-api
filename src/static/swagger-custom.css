@@ -82,17 +82,17 @@ body, .swagger-ui {
 .swagger-ui .curl-container h4,
 .swagger-ui .request-url h4,
 .swagger-ui .opblock-body h4 {
-    color: #f5e0dc !important;
+    color: #cdd6f4 !important;
     font-weight: 600;
 }
 
 .swagger-ui .opblock-section-header h4 {
-    color: #f5e0dc !important;
+    color: #cdd6f4 !important;
 }
 
 .swagger-ui section.models h4,
 .swagger-ui section.models h4 span {
-    color: #f5e0dc !important;
+    color: #cdd6f4 !important;
     font-weight: bold;
 }
 
