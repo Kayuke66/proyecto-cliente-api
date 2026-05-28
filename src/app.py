@@ -271,6 +271,6 @@ async def custom_swagger_ui_html():
         swagger_favicon_url="https://www.santrame.com/favicon.ico"
     )
 
-    css_link = '<link rel="stylesheet" href="/static/swagger-custom.css">'
+    css_link = '<link rel="stylesheet" href="/static/swagger-custom.css?nocache=123">'
     html_content = html.body.decode("utf-8").replace("</head>", f"{css_link}</head>")
     return HTMLResponse(content=html_content)

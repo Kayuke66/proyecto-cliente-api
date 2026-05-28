@@ -40,7 +40,7 @@ class CompactPointDto(BaseModel):
 
 class BaseNodeDto(BaseModel):
     id: str
-    name: str
+    name_name: str
     description: str | None = None
     metadata: dict[str, Any] | None = None
 

@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5e9a4a7-5ff3-43af-a97d-7171a897a919" name="Changes" comment="Final check of the project">
-      <change afterPath="$PROJECT_DIR$/src/static/swagger-custom.css" afterDir="false" />
+    <list default="true" id="b5e9a4a7-5ff3-43af-a97d-7171a897a919" name="Changes" comment="Fixed for new css styles.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/digital_twin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/digital_twin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/system_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/system_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/swagger-custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/swagger-custom.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +73,7 @@
     </selectedModels>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="62" />
+    <option name="cachedIndexableFilesCount" value="67" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -81,6 +84,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/digital-twin-sync" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -138,9 +146,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "feature/digital-twin-sync",
+    "git-widget-placeholder": "feature/ui-design",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/Usuario/Desktop",
+    "last_opened_file_path": "C:/Users/Usuario/Downloads/santra-python/src/static",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -154,6 +162,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuario\Downloads\santra-python\src\static" />
       <recent name="C:\Users\Usuario\Desktop" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -216,7 +225,8 @@
       <workItem from="1779689508635" duration="17250000" />
       <workItem from="1779775772631" duration="7348000" />
       <workItem from="1779784973178" duration="7505000" />
-      <workItem from="1779862580252" duration="7421000" />
+      <workItem from="1779862580252" duration="15096000" />
+      <workItem from="1779948714055" duration="5907000" />
     </task>
     <task id="LOCAL-00001" summary="Final check of the project">
       <option name="closed" value="true" />
@@ -226,7 +236,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779793368375</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed for new css styles.">
+      <option name="closed" value="true" />
+      <created>1779870146718</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779870146718</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fixed for new css styles.">
+      <option name="closed" value="true" />
+      <created>1779870166195</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779870166195</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +260,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Final check of the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final check of the project" />
+    <MESSAGE value="Fixed for new css styles." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed for new css styles." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/santra_python$app.coverage" NAME="app Coverage Results" MODIFIED="1779865496029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
